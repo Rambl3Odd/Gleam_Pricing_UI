@@ -1,0 +1,1163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gleam Central Booking Hub V6.1</title>
+
+    <!-- BRAND FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* --- SCOPED CSS (Safety Wrapper) --- */
+        #gleam-hub-widget-container {
+            --gc-primary: #3D9898;       /* Gleam Cyan */
+            --gc-primary-dark: #279493;
+            --gc-accent: #FFC107;         /* Sparkle Gold */
+            --gc-text: #2D3748;           /* Dark Grey */
+            --gc-text-light: #4A5568;
+            --gc-subtext: #718096;
+            --gc-bg: #FFFFFF;
+            --gc-border: #EDF2F7;
+            --gc-success: #48BB78;
+            --gc-danger: #E53E3E;
+            
+            font-family: 'Open Sans', sans-serif;
+            color: var(--gc-text);
+            width: 100%;
+            max-width: 750px; 
+            margin: 0 auto;
+            padding: 20px;
+            box-sizing: border-box;
+            line-height: 1.5;
+        }
+
+        #gleam-hub-widget-container * { box-sizing: border-box; }
+
+        .poppins { font-family: 'Poppins', sans-serif; }
+        .open-sans { font-family: 'Open Sans', sans-serif; }
+
+        /* Utility Replacements */
+        .gh-text-center { text-align: center; }
+        .gh-font-bold { font-weight: 700; }
+        .gh-font-black { font-weight: 900; }
+        .gh-text-sm { font-size: 15px; }
+        .gh-text-xs { font-size: 13px; }
+        .gh-text-2xl { font-size: 1.75rem; }
+        .gh-text-3xl { font-size: 2.25rem; }
+        .gh-text-gray-500 { color: #718096; }
+        .gh-text-gray-400 { color: #A0AEC0; }
+        .gh-text-white { color: white; }
+        .gh-mb-1 { margin-bottom: 4px; }
+        .gh-mb-2 { margin-bottom: 8px; }
+        .gh-mb-3 { margin-bottom: 12px; }
+        .gh-mb-4 { margin-bottom: 16px; }
+        .gh-mb-6 { margin-bottom: 24px; }
+        .gh-mb-8 { margin-bottom: 32px; }
+        .gh-mt-1 { margin-top: 4px; }
+        .gh-mt-8 { margin-top: 32px; }
+        .gh-pt-4 { padding-top: 16px; }
+        .gh-pt-20 { padding-top: 80px; }
+        .gh-w-full { width: 100%; }
+        .gh-flex { display: flex; }
+        .gh-flex-col { flex-direction: column; }
+        .gh-justify-between { justify-content: space-between; }
+        .gh-justify-center { justify-content: center; }
+        .gh-items-center { align-items: center; }
+        .gh-items-start { align-items: flex-start; }
+        .gh-gap-1 { gap: 4px; }
+        .gh-gap-2 { gap: 8px; }
+        .gh-gap-3 { gap: 12px; }
+        .gh-bg-gray-50 { background-color: #F7FAFC; }
+        .gh-bg-gray-100 { background-color: #EDF2F7; }
+        .gh-bg-white { background-color: white; }
+        .gh-p-3 { padding: 12px; }
+        .gh-p-4 { padding: 20px; }
+        .gh-px-1 { padding-left: 4px; padding-right: 4px; }
+        .gh-px-2 { padding-left: 8px; padding-right: 8px; }
+        .gh-px-8 { padding-left: 32px; padding-right: 32px; }
+        .gh-py-1 { padding-top: 4px; padding-bottom: 4px; }
+        .gh-py-2 { padding-top: 8px; padding-bottom: 8px; }
+        .gh-rounded { border-radius: 4px; }
+        .gh-rounded-lg { border-radius: 8px; }
+        .gh-rounded-xl { border-radius: 12px; }
+        .gh-rounded-full { border-radius: 9999px; }
+        .gh-border { border-width: 1px; }
+        .gh-border-2 { border-width: 2px; }
+        .gh-border-gray-100 { border-color: #EDF2F7; }
+        .gh-border-gray-200 { border-color: #E2E8F0; }
+        .gh-border-gray-300 { border-color: #CBD5E0; }
+        .gh-border-transparent { border-color: transparent; }
+        .gh-grid { display: grid; }
+        .gh-grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
+        .gh-relative { position: relative; }
+        .gh-absolute { position: absolute; }
+        .gh-inset-0 { top: 0; right: 0; bottom: 0; left: 0; }
+        .gh-z-0 { z-index: 0; }
+        .gh-z-10 { z-index: 10; }
+        .gh-shadow-xl { box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); }
+        .gh-mx-auto { margin-left: auto; margin-right: auto; }
+        .gh-cursor-pointer { cursor: pointer; }
+        .gh-cursor-default { cursor: default; }
+        .gh-opacity-30 { opacity: 0.3; }
+        .gh-pointer-events-none { pointer-events: none; }
+        .gh-uppercase { text-transform: uppercase; }
+        .gh-tracking-wide { letter-spacing: 0.025em; }
+        .gh-tracking-tight { letter-spacing: -0.025em; }
+        .gh-leading-relaxed { line-height: 1.625; }
+        .gh-inline-flex { display: inline-flex; }
+        .gh-shrink-0 { flex-shrink: 0; }
+        .gh-transition-colors { transition-property: color, background-color, border-color, text-decoration-color, fill, stroke; transition-duration: 150ms; }
+        .gh-animate-spin { animation: spin 1s linear infinite; }
+        @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+        
+        /* Icons */
+        .gh-icon-sm { width: 14px; height: 14px; }
+        .gh-icon-md { width: 18px; height: 18px; }
+        .gh-icon-lg { width: 24px; height: 24px; }
+        .gh-icon-xl { width: 36px; height: 36px; }
+        .gh-icon-2xl { width: 48px; height: 48px; }
+        
+        .gh-text-primary { color: var(--gc-primary); }
+        .gh-border-primary { border-color: var(--gc-primary); }
+        .gh-bg-primary { background-color: var(--gc-primary); }
+        .gh-text-dark { color: var(--gc-text); }
+        .gh-hover-underline:hover { text-decoration: underline; }
+        .gh-hover-border-gray-200:hover { border-color: #E2E8F0; }
+        .gh-hover-text-primary:hover { color: var(--gc-primary); }
+        .gh-hover-border-primary:hover { border-color: var(--gc-primary); }
+        
+        /* Note Tag */
+        .gh-note-tag {
+            font-size: 10px;
+            background-color: #EFF6FF;
+            color: #2563EB;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        /* --- APP FRAME --- */
+        .gh-app-frame {
+            background: var(--gc-bg);
+            border: 1px solid var(--gc-border);
+            border-radius: 24px;
+            box-shadow: 0 15px 45px rgba(0,0,0,0.08);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            height: 95vh; 
+            min-height: 850px;
+            max-height: 1100px;
+            position: relative;
+        }
+
+        /* --- TOP BAR --- */
+        .gh-timer-bar {
+            background: #2A9392; 
+            padding: 12px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+            z-index: 10;
+        }
+        .gh-timer-label { font-size: 12px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; color: rgba(255,255,255,0.9); display: flex; align-items: center; gap: 8px; }
+        .gh-timer-clock { 
+            font-family: monospace; 
+            font-size: 18px; 
+            font-weight: 700; 
+            color: #FFFFFF; 
+            background: rgba(255,255,255,0.1); 
+            padding: 6px 12px; 
+            border-radius: 6px; 
+        }
+
+        /* Progress Bar */
+        .gh-progress-container {
+            background: white;
+            padding: 20px 30px 0 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            border-bottom: 1px solid transparent;
+        }
+        .gh-progress-header { display: flex; justify-content: space-between; align-items: flex-end; }
+        .gh-progress-step { font-size: 11px; font-weight: 800; color: var(--gc-primary); text-transform: uppercase; letter-spacing: 1px; }
+        .gh-progress-title { font-size: 16px; font-weight: 700; color: var(--gc-text); }
+        .gh-progress-track { width: 100%; height: 6px; background: #EDF2F7; border-radius: 10px; overflow: hidden; }
+        .gh-progress-fill { height: 100%; background: var(--gc-primary); border-radius: 10px; transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+
+        /* Content Area */
+        .gh-content {
+            flex: 1;
+            overflow-y: auto;
+            padding: 0 30px 30px 30px;
+            scrollbar-width: none;
+        }
+        .gh-content::-webkit-scrollbar { display: none; }
+        .fade-in { animation: ghFadeIn 0.4s ease-out; }
+        @keyframes ghFadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+
+        /* Pricing & Leverage */
+        .gh-price-header {
+            text-align: center;
+            padding: 28px 0 10px 0;
+            background: white;
+            position: sticky;
+            top: 0;
+            z-index: 5;
+        }
+        .gh-price-label { font-size: 13px; font-weight: 700; color: var(--gc-subtext); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px; }
+        .gh-price-range { font-size: 36px; font-weight: 800; color: var(--gc-text); line-height: 1.1; letter-spacing: -0.5px; }
+        .gh-price-sub { font-size: 12px; color: var(--gc-success); font-weight: 600; margin-top: 8px; }
+
+        .gh-setup-leverage {
+            background: #F0FDFA;
+            border: 2px solid var(--gc-primary);
+            padding: 20px;
+            border-radius: 18px;
+            margin: 24px 0;
+            display: flex;
+            gap: 16px;
+            box-shadow: 0 4px 15px rgba(61, 152, 152, 0.08);
+        }
+        .gh-leverage-title { font-size: 14px; font-weight: 800; color: var(--gc-primary-dark); margin-bottom: 4px; text-transform: uppercase; font-style: italic; }
+        .gh-leverage-text { font-size: 13px; color: #4A5568; line-height: 1.5; }
+
+        /* --- RESULT CARD STYLES --- */
+        .gh-result-card {
+            background: #FFFFFF;
+            border: 1px solid var(--gc-border); border-radius: 16px;
+            padding: 30px 24px; text-align: center; position: relative;
+            box-shadow: 0 10px 20px -5px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+        }
+        .gh-result-super { font-size:11px; font-weight:800; color:#A0AEC0; letter-spacing:1px; text-transform:uppercase; margin-bottom: 8px; }
+        .gh-price-big { font-family: 'Poppins', sans-serif; font-size: 52px; font-weight: 800; color: var(--gc-text); margin: 0; letter-spacing: -1.5px; line-height: 1; }
+        
+        .gh-range-pill {
+            background: #F1F5F9;
+            color: #4A5568;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 14px;
+            display: inline-block;
+            margin-top: 12px;
+        }
+
+        /* 3-Column Stats Grid */
+        .gh-stats-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            margin: 25px 0;
+            background: #fff;
+            border: 1px solid #EDF2F7;
+            border-radius: 12px;
+            padding: 15px 0;
+        }
+        .gh-stat-col {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-right: 1px solid #EDF2F7;
+        }
+        .gh-stat-col:last-child { border-right: none; }
+        .gh-stat-label { font-size: 10px; text-transform: uppercase; letter-spacing: 0.5px; color: #A0AEC0; margin-bottom: 4px; font-weight: 700; }
+        .gh-stat-val { font-weight: 700; color: #2D3748; font-size: 15px; }
+
+        /* Savings Banner */
+        .gh-savings-banner {
+            background: #E6FFFA;
+            color: #2C7A7B;
+            border: 1px solid #B2F5EA;
+            padding: 12px 15px;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 13px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        /* Accordion Toggle Styles */
+        .gh-accordion-toggle {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            padding: 12px 0;
+            width: 100%;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-weight: 700;
+            font-size: 11px;
+            color: var(--gc-subtext);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.2s;
+            border-top: 1px solid var(--gc-border);
+        }
+        .gh-accordion-toggle:hover { color: var(--gc-primary); }
+        .gh-carrot { transition: transform 0.3s ease; display: inline-flex; }
+        .gh-carrot.open { transform: rotate(180deg); }
+        
+        .gh-breakdown-wrapper {
+            overflow: hidden;
+            max-height: 0;
+            transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            opacity: 0;
+            text-align: left;
+        }
+        .gh-breakdown-wrapper.open {
+            max-height: 2000px;
+            opacity: 1;
+            padding-top: 15px;
+        }
+
+        /* Breakdown Table */
+        .gh-breakdown-table { width: 100%; margin: 0; border-collapse: collapse; font-size: 13px; }
+        .gh-breakdown-table th { text-align: left; color: #A0AEC0; font-weight: 600; padding: 0 0 10px 0; font-size: 11px; text-transform: uppercase; }
+        .gh-breakdown-table td { text-align: left; padding: 12px 0; border-bottom: 1px dashed #E2E8F0; color: #2D3748; vertical-align: top; }
+        .gh-breakdown-table tr:last-child td { border-bottom: none; }
+        .gh-td-time { color: #718096; font-size: 12px; font-weight: 500; }
+        .gh-item-name { font-weight: 700; display: block; color: #2D3748; }
+        .gh-item-sub { font-size:11px; color:#718096; display:block; margin-top:2px; font-weight: 400; }
+        .gh-price-green { color: var(--gc-success); font-weight: 700; }
+        .gh-savings-row-val { color: var(--gc-success); font-weight: 600; font-size: 11px; }
+
+        /* Add-ons Section */
+        .gh-section-title { font-size: 16px; font-weight: 700; color: var(--gc-text); margin: 28px 0 14px 0; display: flex; align-items: center; justify-content: space-between; }
+        .gh-addon-card {
+            background: white;
+            border: 1px solid var(--gc-border);
+            border-radius: 18px;
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            margin-bottom: 16px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+        }
+        .gh-addon-card:hover { border-color: #CBD5E0; transform: translateY(-1px); }
+        .gh-addon-card.selected { border-color: var(--gc-primary); background: #F0FDFA; border-width: 2px; }
+        
+        .gh-addon-info { display: flex; align-items: center; gap: 16px; }
+        .gh-addon-img { width: 56px; height: 56px; object-fit: contain; border-radius: 10px; background: #F7FAFC; padding: 6px; }
+        .gh-addon-name { font-size: 17px; font-weight: 700; color: var(--gc-text); }
+        .gh-addon-sub { font-size: 13px; color: var(--gc-subtext); font-weight: 500; margin-top: 4px; max-width: 300px; }
+        .gh-addon-price-col { text-align: right; display: flex; flex-direction: column; align-items: flex-end; }
+        .gh-price-tag { font-size: 17px; font-weight: 800; color: var(--gc-text); }
+        
+        /* Qty Controls */
+        .gh-qty-control {
+            display: flex; align-items: center; gap: 10px; margin-top: 8px;
+            background: white; border-radius: 8px; padding: 4px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05); border: 1px solid #E2E8F0;
+        }
+        .gh-qty-btn { 
+            width: 24px; height: 24px; display: flex; align-items: center; justify-content: center; 
+            border-radius: 6px; font-weight: 700; color: var(--gc-primary); cursor: pointer;
+            font-size: 16px; transition: 0.1s;
+        }
+        .gh-qty-btn:hover { background: #F0FDFA; }
+        .gh-qty-val { font-size: 14px; font-weight: 700; color: var(--gc-text); min-width: 20px; text-align: center; }
+        .gh-badge-popular {
+            position: absolute; top: -10px; left: 20px; background: var(--gc-accent); color: #744210;
+            font-size: 10px; font-weight: 800; padding: 3px 10px; border-radius: 12px; text-transform: uppercase; box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        /* Scheduling */
+        .gh-toggle-container {
+            background: #F1F5F9;
+            padding: 6px;
+            border-radius: 14px;
+            display: flex;
+            margin-bottom: 24px;
+        }
+        .gh-toggle-btn {
+            flex: 1; padding: 12px; border: none; background: none; font-size: 13px;
+            font-weight: 700; text-transform: uppercase; color: #94A3B8; cursor: pointer;
+            border-radius: 10px; transition: 0.2s;
+        }
+        .gh-toggle-btn.active { background: white; color: var(--gc-primary); box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+
+        .gh-slot-btn {
+            width: 100%; padding: 22px 24px; border: 2px solid var(--gc-border); background: white;
+            border-radius: 18px; margin-bottom: 12px; text-align: left; display: flex;
+            justify-content: space-between; align-items: center; cursor: pointer; transition: 0.2s;
+        }
+        .gh-slot-btn:hover { border-color: #CBD5E0; }
+        .gh-slot-btn.selected { border-color: var(--gc-primary); background: #F0FDFA; box-shadow: 0 4px 12px rgba(61, 152, 152, 0.15); }
+        .gh-slot-date { font-weight: 700; font-size: 16px; display: block; color: var(--gc-text); }
+        .gh-slot-time { font-size: 14px; color: var(--gc-subtext); margin-top: 4px; }
+
+        /* Footer */
+        .gh-footer {
+            padding: 24px 30px;
+            background: white;
+            border-top: 1px solid var(--gc-border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 20;
+            box-shadow: 0 -4px 20px rgba(0,0,0,0.03);
+        }
+        .gh-total-label { font-size: 12px; font-weight: 800; color: var(--gc-subtext); text-transform: uppercase; letter-spacing: 0.5px; }
+        .gh-total-val { font-size: 40px; font-weight: 800; color: var(--gc-text); line-height: 1; letter-spacing: -1.5px; }
+        .gh-savings-pill { font-size: 12px; font-weight: 700; background: #E6FFFA; color: var(--gc-primary-dark); padding: 5px 12px; border-radius: 20px; display: inline-flex; align-items: center; gap: 6px; }
+
+        .gh-main-btn {
+            background: linear-gradient(135deg, var(--gc-primary) 0%, var(--gc-primary-dark) 100%);
+            color: white; border: none; padding: 0 32px; height: 60px; border-radius: 18px;
+            font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 16px;
+            cursor: pointer; transition: 0.3s;
+            box-shadow: 0 8px 20px rgba(61, 152, 152, 0.25);
+            display: flex; align-items: center; gap: 10px;
+        }
+        .gh-main-btn:hover { transform: translateY(-2px); filter: brightness(1.05); box-shadow: 0 12px 25px rgba(61, 152, 152, 0.35); }
+        .gh-main-btn:disabled { opacity: 0.5; cursor: not-allowed; transform: none; box-shadow: none; background: #CBD5E0; }
+
+        .gh-input {
+            width: 100%; padding: 20px; border: 1px solid var(--gc-border); background: #F8FAFC;
+            border-radius: 16px; font-size: 16px; outline: none; transition: 0.2s; margin-bottom: 14px;
+            font-family: 'Open Sans', sans-serif; color: var(--gc-text);
+        }
+        .gh-input:focus { border-color: var(--gc-primary); background: white; box-shadow: 0 0 0 3px rgba(61, 152, 152, 0.1); }
+        
+        /* --- GOOGLE AUTOCOMPLETE FIX --- */
+        .pac-container { 
+            z-index: 20000 !important;
+            border-radius: 12px !important; 
+            margin-top: 4px !important; 
+            border: 1px solid #EDF2F7 !important; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15) !important; 
+            font-family: 'Open Sans', sans-serif !important; 
+            background-color: white !important;
+        }
+        .pac-item {
+            padding: 14px 18px !important;
+            font-size: 15px !important;
+            color: #2D3748 !important;
+            cursor: pointer !important;
+            line-height: 1.5 !important;
+            border-top: 1px solid #f7fafc !important;
+        }
+        .pac-item:hover { background-color: #F0FDFA !important; }
+        .pac-item-query { font-size: 15px !important; color: #2D3748 !important; font-weight: 700 !important; padding-right: 5px; }
+        .pac-icon { display: none !important; width: 0 !important; }
+
+        /* --- MOBILE ADAPTATION --- */
+        @media (max-width: 640px) {
+            #gleam-hub-widget-container { padding: 10px; max-width: 100%; }
+            .gh-app-frame { border-radius: 16px; min-height: 600px; height: auto; max-height: none; }
+            .gh-price-big { font-size: 36px; }
+            .gh-result-card { padding: 20px 15px; }
+            .gh-addon-card { padding: 15px; }
+            .gh-addon-img { width: 45px; height: 45px; }
+            .gh-addon-name { font-size: 15px; }
+            .gh-addon-sub { max-width: 180px; font-size: 12px; }
+            .gh-price-tag { font-size: 15px; }
+            .gh-main-btn { padding: 0 20px; font-size: 14px; height: 50px; }
+            .gh-total-val { font-size: 32px; }
+            .gh-content { padding: 0 20px 20px 20px; }
+            .gh-footer { padding: 15px 20px; }
+            .gh-stats-grid { grid-template-columns: 1fr; gap: 10px; padding: 10px 0; }
+            .gh-stat-col { border-right: none; border-bottom: 1px solid #EDF2F7; padding-bottom: 8px; }
+            .gh-stat-col:last-child { border-bottom: none; padding-bottom: 0; }
+        }
+    </style>
+</head>
+<body class="gh-bg-gray-100" style="min-height: 100vh;">
+
+    <div id="gleam-hub-widget-container">
+        <div id="booking-hub-root"></div>
+    </div>
+
+    <!-- CDNs -->
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://unpkg.com/lucide@0.263.0/dist/umd/lucide.min.js"></script>
+    
+    <!-- GOOGLE MAPS API -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYnYNQbXt_EzECCJISvhFcr-7X04vw7aE&libraries=places"></script>
+
+    <script type="text/babel">
+        const { useState, useEffect, useMemo, useRef } = React;
+
+        const WEBHOOK_URL = "https://hook.us2.make.com/wprk61uaaa1jvii7bsrxto5k64y36pny"; 
+        const AVAILABILITY_WEBHOOK = "https://hook.us2.make.com/m8074aeoa757vitmyqdo4v5tx2m9dmxw"; 
+        const AUTH_TOKEN = "GleamSecure2026!"; 
+
+        const Icon = ({ name, className, style }) => {
+            const containerRef = useRef(null);
+            useEffect(() => {
+                if (window.lucide && containerRef.current) {
+                    containerRef.current.innerHTML = `<i data-lucide="${name}"></i>`;
+                    window.lucide.createIcons({ attrs: { class: className, style: style } });
+                }
+            }, [name, className, style]);
+            return <span ref={containerRef} className="gh-inline-flex gh-items-center"></span>;
+        };
+
+        function App() {
+            const [step, setStep] = useState(1);
+            const [selectedSlot, setSelectedSlot] = useState(null);
+            const [scheduleMode, setScheduleMode] = useState('suggested');
+            const [timeLeft, setTimeLeft] = useState(900);
+            const [calendarPage, setCalendarPage] = useState(0);
+            const [isSubmitting, setIsSubmitting] = useState(false);
+            const [showBreakdown, setShowBreakdown] = useState(false);
+            
+            // --- Handshake States ---
+            const [availableSlots, setAvailableSlots] = useState([]);
+            const [isLoadingSlots, setIsLoadingSlots] = useState(false);
+            
+            // --- INBOUND DATA PARSING (V3.38 -> V6.1 Handshake) ---
+            const [inbound, setInbound] = useState(() => {
+                const params = new URLSearchParams(window.location.search);
+                let lineItems = [];
+                try {
+                    const rawBreakdown = params.get('breakdown');
+                    if (rawBreakdown) lineItems = JSON.parse(decodeURIComponent(rawBreakdown));
+                } catch (e) { console.error("Parse error", e); }
+
+                return {
+                    panes: params.get('panes') || '--',
+                    basePrice: parseFloat(params.get('base')) || 0,
+                    inboundSavings: parseFloat(params.get('savings')) || 0,
+                    onsiteTime: params.get('onsite') ? decodeURIComponent(params.get('onsite')) : '--',
+                    homeSize: params.get('sqft') ? `${parseInt(params.get('sqft')).toLocaleString()} sq ft` : '--',
+                    lineItems: lineItems
+                };
+            });
+
+            const [contactForm, setContactForm] = useState({ firstName: '', lastName: '', email: '', phone: '' });
+            const [selectedAddons, setSelectedAddons] = useState({ dv: 1 });
+            const [address, setAddress] = useState('');
+            const addressInputRef = useRef(null);
+
+            const isFormValid = useMemo(() => {
+                return contactForm.firstName.trim() !== '' && 
+                       contactForm.lastName.trim() !== '' && 
+                       contactForm.email.trim() !== '' && 
+                       contactForm.phone.trim() !== '' &&
+                       address.trim() !== '';
+            }, [contactForm, address]);
+
+            // --- FETCH AVAILABILITY LOGIC ---
+            useEffect(() => {
+                if (step === 2 && inbound.onsiteTime !== '--') {
+                    setIsLoadingSlots(true);
+                    
+                    fetch(AVAILABILITY_WEBHOOK, {
+                        method: "POST",
+                        headers: { 
+                            "Content-Type": "application/json", 
+                            "x-gleam-auth": AUTH_TOKEN 
+                        },
+                        body: JSON.stringify({
+                            duration: inbound.onsiteTime,
+                            panes: inbound.panes,
+                            address: address 
+                        })
+                    })
+                    .then(res => res.json())
+                    .then(data => {
+                        setAvailableSlots(data.slots || []); 
+                        setIsLoadingSlots(false);
+                    })
+                    .catch(err => {
+                        console.error("Availability error:", err);
+                        setIsLoadingSlots(false);
+                    });
+                }
+            }, [step, inbound.onsiteTime]);
+
+            useEffect(() => {
+                if (step === 3 && window.google && addressInputRef.current) {
+                    try {
+                        const autocomplete = new window.google.maps.places.Autocomplete(addressInputRef.current, {
+                            types: ['address'],
+                            componentRestrictions: { country: 'us' },
+                            fields: ['address_components', 'geometry', 'formatted_address']
+                        });
+                        autocomplete.addListener('place_changed', () => {
+                            const place = autocomplete.getPlace();
+                            if (place.formatted_address) {
+                                setAddress(place.formatted_address);
+                            }
+                        });
+                    } catch (e) {
+                        console.log("Maps API Error:", e);
+                    }
+                }
+            }, [step]);
+
+            const ADDONS_DATA = useMemo(() => {
+                const serviceNames = inbound.lineItems.map(i => i.name.toLowerCase()).join(' ');
+                let category = 'window'; 
+                if (serviceNames.includes('wash') || serviceNames.includes('driveway') || serviceNames.includes('roof')) category = 'exterior';
+                if (serviceNames.includes('gutter') || serviceNames.includes('solar')) category = 'maintenance';
+
+                const hasScreenCleaning = serviceNames.includes('screen');
+                const estScreens = Math.round(parseInt(inbound.panes)) || 20; 
+
+                const commonAddons = [
+                    { 
+                        id: 'dv', 
+                        sku: 'RES-DRY-CLN',
+                        name: 'Dryer Vent Cleaning', 
+                        sub: 'Prevent fire hazards & save energy.', 
+                        img: 'https://images.squarespace-cdn.com/content/v1/619afe45ad84012af3853c29/e67ea7aa-f0b8-452c-9b82-a66743d6e2dc/service-homecare%26mx-dryervent%28300x300%29.png?format=750w', 
+                        price: 99, reg: 149, popular: true, defaultQty: 1, editable: false 
+                    }
+                ];
+
+                const rescreenSizes = [
+                    { key: 'small', label: 'Under 5 sq.ft.', price: 30 },
+                    { key: 'med', label: '5-10 sq.ft.', price: 40 },
+                    { key: 'large', label: '10-15 sq.ft.', price: 50 }
+                ];
+
+                const frameSizes = [
+                    { key: 'small', label: 'Under 5 sq.ft.', price: 80 },
+                    { key: 'med', label: '5-10 sq.ft.', price: 110 },
+                    { key: 'large', label: '10-15 sq.ft.', price: 140 }
+                ];
+
+                if (category === 'window') {
+                    const results = [...commonAddons];
+                    
+                    if (hasScreenCleaning && estScreens > 0) {
+                        results.push({ 
+                            id: 'seal', 
+                            sku: 'RES-SCR-SEL',
+                            name: 'Window Screen Sealing', 
+                            sub: `UV protection for your ${estScreens} screens.`, 
+                            img: 'https://images.squarespace-cdn.com/content/v1/619afe45ad84012af3853c29/db20b51d-8504-4373-8879-6b4f5966ea4f/service-window%26glass-screens%28300x300%29.png?format=750w', 
+                            price: 1.50, reg: 3.00, popular: false, defaultQty: estScreens, unit: 'screen', editable: false 
+                        });
+                    }
+                    
+                    results.push({ 
+                        id: 'rescreen', 
+                        sku: 'RES-SCR-RMD',
+                        name: 'Rescreening (Mesh)', 
+                        sub: 'Replace torn mesh.', 
+                        img: 'https://images.squarespace-cdn.com/content/v1/619afe45ad84012af3853c29/01f57e76-9d1e-4a39-b174-c7212af39a6f/service-exteriorsurface-deck%28300x300%29_1.png?format=750w', 
+                        isMultiSize: true,
+                        sizes: rescreenSizes,
+                        popular: false, 
+                        editable: true 
+                    });
+                    
+                    results.push({
+                        id: 'frame_build',
+                        sku: 'RES-SCR-NEW',
+                        name: 'Custom Frame Build',
+                        sub: 'Complete frame and mesh fabrication.',
+                        img: 'https://images.squarespace-cdn.com/content/v1/619afe45ad84012af3853c29/5795b46f-0446-4d83-8565-f1392a5a1bb6/service-exteriorsurface-deck%28300x300%29_2.png?format=750w',
+                        isMultiSize: true,
+                        sizes: frameSizes,
+                        popular: false,
+                        editable: true
+                    });
+                    
+                    return results;
+                } else if (category === 'exterior') {
+                    return [
+                        ...commonAddons,
+                        { 
+                            id: 'window_touchup', 
+                            sku: 'RES-WIN-TCH',
+                            name: 'Exterior Window Wash', 
+                            sub: 'Remove hard water & runoff spots.', 
+                            img: 'https://images.squarespace-cdn.com/content/v1/619afe45ad84012af3853c29/4cf77caa-aaf4-41ad-bd1a-2d39ba9d1ab4/service-window%26glass-exterior%28300x300%29.png?format=300w', 
+                            price: 199, reg: 249, popular: true, defaultQty: 1, editable: true 
+                        },
+                        { 
+                            id: 'gutter_flush', 
+                            sku: 'RES-HMX-GUT',
+                            name: 'Gutter Flush', 
+                            sub: 'Ensure proper drainage.', 
+                            img: 'https://images.squarespace-cdn.com/content/v1/619afe45ad84012af3853c29/e67ea7aa-f0b8-452c-9b82-a66743d6e2dc/service-homecare%26mx-dryervent%28300x300%29.png?format=750w', 
+                            price: 149, reg: 199, popular: false, defaultQty: 1, editable: true 
+                        }
+                    ];
+                } else { 
+                    return [
+                        ...commonAddons,
+                        { 
+                            id: 'walkway_wash', 
+                            sku: 'RES-EXT-WLK',
+                            name: 'Walkway Pressure Wash', 
+                            sub: 'Boost curb appeal & safety.', 
+                            img: 'https://images.squarespace-cdn.com/content/v1/619afe45ad84012af3853c29/01f57e76-9d1e-4a39-b174-c7212af39a6f/service-exteriorsurface-deck%28300x300%29_1.png?format=750w', 
+                            price: 129, reg: 179, popular: true, defaultQty: 1, editable: true 
+                        }
+                    ];
+                }
+            }, [inbound]);
+
+            const DAYS_PER_PAGE = 6;
+            const visibleDays = availableSlots.slice(calendarPage * DAYS_PER_PAGE, (calendarPage + 1) * DAYS_PER_PAGE);
+            const hasNextPage = (calendarPage + 1) * DAYS_PER_PAGE < availableSlots.length;
+
+            const toggleAddon = (id, defaultQty, isMultiSize) => {
+                setSelectedAddons(prev => {
+                    const newState = { ...prev };
+                    if (id in newState) { 
+                        delete newState[id]; 
+                    } else { 
+                        if (isMultiSize) {
+                            newState[id] = { small: 0, med: 1, large: 0 };
+                        } else {
+                            newState[id] = defaultQty || 1; 
+                        }
+                    }
+                    return newState;
+                });
+            };
+
+            const updateQty = (id, delta, sizeKey) => {
+                setSelectedAddons(prev => {
+                    const current = prev[id];
+                    if (typeof current === 'object') {
+                        return {
+                            ...prev,
+                            [id]: {
+                                ...current,
+                                [sizeKey]: Math.max(0, current[sizeKey] + delta)
+                            }
+                        };
+                    }
+                    return { ...prev, [id]: Math.max(1, current + delta) };
+                });
+            };
+
+            useEffect(() => { const timer = setInterval(() => setTimeLeft(p => p > 0 ? p - 1 : 0), 1000); return () => clearInterval(timer); }, []);
+
+            const totals = useMemo(() => {
+                let addOnPrice = 0; let addOnSavings = 0;
+                Object.entries(selectedAddons).forEach(([id, val]) => {
+                    const addon = ADDONS_DATA.find(a => a.id === id);
+                    if (addon) {
+                        if (addon.isMultiSize) {
+                            Object.entries(val).forEach(([sizeKey, qty]) => {
+                                const sizeConfig = addon.sizes.find(s => s.key === sizeKey);
+                                if (sizeConfig) {
+                                    addOnPrice += sizeConfig.price * qty;
+                                    addOnSavings += (sizeConfig.price * 0.1) * qty; 
+                                }
+                            });
+                        } else {
+                            const qty = val;
+                            addOnPrice += addon.price * qty;
+                            addOnSavings += (addon.reg - addon.price) * qty;
+                        }
+                    }
+                });
+                const final = inbound.basePrice + addOnPrice;
+                const rangeLow = Math.floor(inbound.basePrice * 0.92);
+                const rangeHigh = Math.ceil(inbound.basePrice * 1.08); 
+
+                return { 
+                    total: final.toFixed(0), 
+                    savings: addOnSavings + 60, 
+                    baseLow: rangeLow, 
+                    baseHigh: rangeHigh 
+                };
+            }, [inbound, selectedAddons, ADDONS_DATA]);
+
+            const formatTime = (s) => `${Math.floor(s / 60)}:${(s % 60).toString().padStart(2, '0')}`;
+            const getStepTitle = () => step === 1 ? "Review & Customize" : step === 2 ? "Choose Time Slot" : step === 3 ? "Final Details" : "Complete";
+            
+            const handleInputChange = (e) => {
+                const { name, value } = e.target;
+                setContactForm(prev => ({ ...prev, [name]: value }));
+            };
+
+            const handleSubmit = async () => {
+                if (isSubmitting) return;
+                setIsSubmitting(true);
+
+                const addonItems = [];
+                Object.entries(selectedAddons).forEach(([id, val]) => {
+                    const addon = ADDONS_DATA.find(a => a.id === id);
+                    if (!addon) return;
+                    if (addon.isMultiSize) {
+                        Object.entries(val).forEach(([sizeKey, qty]) => {
+                            if (qty > 0) {
+                                const sizeConfig = addon.sizes.find(s => s.key === sizeKey);
+                                addonItems.push({
+                                    name: `${addon.name} (${sizeConfig.label})`,
+                                    qty: qty,
+                                    price: sizeConfig.price,
+                                    sku: `${addon.sku}-${sizeKey.toUpperCase()}`,
+                                    man_hours: 'N/A'
+                                });
+                            }
+                        });
+                    } else {
+                        addonItems.push({
+                            name: addon.name,
+                            qty: val,
+                            price: addon.price,
+                            sku: addon.sku || 'UNKNOWN',
+                            man_hours: 'N/A'
+                        });
+                    }
+                });
+
+                const unifiedLineItems = [
+                    ...inbound.lineItems.map(item => ({
+                        ...item,
+                        qty: 1, 
+                        sku: item.sku || 'UNKNOWN',
+                        man_hours: item.time || 'N/A'
+                    })),
+                    ...addonItems
+                ];
+
+                const totalSavings = parseFloat(totals.savings) + inbound.inboundSavings;
+                if (totalSavings > 0) {
+                    unifiedLineItems.push({
+                        name: 'Bundle Savings',
+                        qty: 1,
+                        price: -Math.abs(totalSavings),
+                        sku: 'PROMO-BUN-DIS',
+                        man_hours: 'Included'
+                    });
+                }
+
+                const payload = {
+                    contact: contactForm,
+                    address: address,
+                    booking: {
+                        date: selectedSlot?.day,
+                        window: selectedSlot?.window,
+                        tag: selectedSlot?.tag || 'Standard'
+                    },
+                    details: {
+                        panes: inbound.panes,
+                        homeSize: inbound.homeSize,
+                        onsiteTime: inbound.onsiteTime
+                    },
+                    financials: {
+                        base_price: inbound.basePrice,
+                        total_price: totals.total,
+                        savings: totalSavings
+                    },
+                    line_items: unifiedLineItems,
+                    addons: selectedAddons,
+                    source: 'Gleam Central Booking Hub V6.1'
+                };
+
+                try {
+                    const response = await fetch(WEBHOOK_URL, {
+                        method: 'POST',
+                        headers: { 
+                            'Content-Type': 'application/json',
+                            'x-gleam-auth': AUTH_TOKEN 
+                        },
+                        body: JSON.stringify(payload)
+                    });
+
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! Status: ${response.status}`);
+                    }
+                    
+                    setStep(4); 
+                } catch (error) {
+                    console.error("Submission failed:", error);
+                    alert("Booking issue — please try again or call us directly.");
+                } finally {
+                    setIsSubmitting(false);
+                }
+            };
+
+            return (
+                <div className="gh-app-frame">
+                    <div className="gh-timer-bar">
+                        <div className="gh-timer-label"><Icon name="clock" className="gh-icon-sm gh-text-white gh-opacity-70" /> Holding spot for</div>
+                        <span className="gh-timer-clock">{formatTime(timeLeft)}</span>
+                    </div>
+
+                    <div className="gh-progress-container">
+                        <div className="gh-progress-header poppins">
+                            <span className="gh-progress-title">{getStepTitle()}</span>
+                            <span className="gh-progress-step">Step {step} of 3</span>
+                        </div>
+                        <div className="gh-progress-track"><div className="gh-progress-fill" style={{ width: `${step * 33.33}%` }}></div></div>
+                    </div>
+
+                    <div className="gh-content">
+                        {step === 1 && (
+                            <div className="fade-in">
+                                <div className="gh-price-header">
+                                    <h2 className="gh-font-black gh-text-2xl gh-text-center gh-mb-3 gh-text-dark">Review Your Estimate</h2>
+                                </div>
+
+                                <div className="gh-result-card fade-in">
+                                    <div className="gh-result-super">ESTIMATED TOTAL</div>
+                                    <div className="gh-price-big">${totals.total}</div>
+                                    <div className="gh-range-pill">${totals.baseLow} - ${totals.baseHigh}</div>
+
+                                    <div className="gh-stats-grid">
+                                        <div className="gh-stat-col">
+                                            <span className="gh-stat-label">HOME SIZE</span>
+                                            <span className="gh-stat-val">{inbound.homeSize}</span>
+                                        </div>
+                                        <div className="gh-stat-col">
+                                            <span className="gh-stat-label">EST. PANES</span>
+                                            <span className="gh-stat-val">~{inbound.panes}</span>
+                                        </div>
+                                        <div className="gh-stat-col">
+                                            <span className="gh-stat-label">ONSITE TIME</span>
+                                            <span className="gh-stat-val">{inbound.onsiteTime}</span>
+                                        </div>
+                                    </div>
+
+                                    {/* SAVINGS BANNER - ALWAYS VISIBLE */}
+                                    {(inbound.inboundSavings + (parseFloat(totals.savings) - 60)) > 0 && (
+                                        <div className="gh-savings-banner">
+                                            <span>⚡ BUNDLE SAVINGS APPLIED:</span>
+                                            <span>-${(inbound.inboundSavings + (parseFloat(totals.savings) - 60)).toFixed(0)}</span>
+                                        </div>
+                                    )}
+
+                                    {/* ACCORDION TOGGLE */}
+                                    <button 
+                                        onClick={() => setShowBreakdown(!showBreakdown)}
+                                        className="gh-accordion-toggle"
+                                    >
+                                        {showBreakdown ? 'Hide Details' : 'View Itemized Breakdown'}
+                                        <span className={`gh-carrot ${showBreakdown ? 'open' : ''}`}>
+                                            <Icon name="chevron-down" className="gh-icon-sm" />
+                                        </span>
+                                    </button>
+
+                                    {/* EXPANDABLE WRAPPER */}
+                                    <div className={`gh-breakdown-wrapper ${showBreakdown ? 'open' : ''}`}>
+                                        <table className="gh-breakdown-table">
+                                            <thead>
+                                                <tr>
+                                                    <th style={{width:'40%'}}>Service</th>
+                                                    <th style={{width:'20%'}}>Man Hours</th>
+                                                    <th style={{width:'20%'}}>Savings</th>
+                                                    <th style={{width:'20%', textAlign:'right'}}>Cost</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                {inbound.lineItems && inbound.lineItems.length > 0 ? (
+                                                    inbound.lineItems.map((item, idx) => (
+                                                        <tr key={idx}>
+                                                            <td>
+                                                                <span className="gh-item-name">{item.name}</span>
+                                                                <span className="gh-item-sub">{item.sub || 'Professional Service'}</span>
+                                                            </td>
+                                                            <td className="gh-td-time">{item.time}</td>
+                                                            <td className="gh-savings-row-val">--</td>
+                                                            <td style={{textAlign:'right'}}>${Math.round(item.price)}</td>
+                                                        </tr>
+                                                    ))
+                                                ) : (
+                                                    <tr>
+                                                        <td colSpan="4" className="gh-text-center gh-py-4 gh-text-gray-500">
+                                                            Loading itemized estimate...
+                                                        </td>
+                                                    </tr>
+                                                )}
+                                                {Object.entries(selectedAddons).map(([id, val]) => {
+                                                    const addon = ADDONS_DATA.find(a => a.id === id);
+                                                    if (!addon) return null;
+                                                    if (addon.isMultiSize) {
+                                                        return Object.entries(val).map(([sizeKey, qty]) => {
+                                                            if (qty === 0) return null;
+                                                            const sizeConfig = addon.sizes.find(s => s.key === sizeKey);
+                                                            return (
+                                                                <tr key={`${id}-${sizeKey}`}>
+                                                                    <td>
+                                                                        <span className="gh-item-name">{addon.name} ({sizeConfig.label})</span>
+                                                                        <span className="gh-item-sub">Added Add-on</span>
+                                                                    </td>
+                                                                    <td className="gh-td-time">Included</td>
+                                                                    <td className="gh-savings-row-val">-${(sizeConfig.price * 0.1).toFixed(0)}</td>
+                                                                    <td style={{textAlign:'right'}}>${Math.round(sizeConfig.price * qty)}</td>
+                                                                </tr>
+                                                            );
+                                                        });
+                                                    }
+                                                    return (
+                                                        <tr key={id}>
+                                                            <td>
+                                                                <span className="gh-item-name">{addon.name}</span>
+                                                                <span className="gh-item-sub">Added Add-on</span>
+                                                            </td>
+                                                            <td className="gh-td-time">Included</td>
+                                                            <td className="gh-savings-row-val">-${(addon.reg - addon.price).toFixed(0)}</td>
+                                                            <td style={{textAlign:'right'}}>${Math.round(addon.price * val)}</td>
+                                                        </tr>
+                                                    );
+                                                })}
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+
+                                <div className="gh-mt-8 gh-mb-4">
+                                    <h3 className="gh-font-black gh-text-2xl gh-text-dark">Recommended Add-ons</h3>
+                                </div>
+
+                                <div className="gh-setup-leverage" style={{ marginBottom: '24px' }}>
+                                    <Icon name="zap" className="gh-icon-xl gh-text-accent gh-mt-1 gh-shrink-0" style={{ color: '#FFC107' }} />
+                                    <div><div className="gh-leverage-title">High Demand Near You!</div><p className="gh-leverage-text">We are booking fast today. Since your <strong>$60 setup fee</strong> is already covered, adding complementary services below is significantly cheaper. Lock them in now before your slot expires!</p></div>
+                                </div>
+                                
+                                <div className="gh-flex gh-flex-col gh-gap-0">
+                                    {ADDONS_DATA.map(a => {
+                                        const isSelected = a.id in selectedAddons;
+                                        const val = selectedAddons[a.id];
+                                        return (
+                                            <div key={a.id} className={`gh-addon-card ${isSelected ? 'selected' : ''}`}>
+                                                <div className="gh-absolute gh-inset-0 gh-z-0" onClick={() => toggleAddon(a.id, a.defaultQty, a.isMultiSize)}></div>
+                                                {a.popular && <div className="gh-badge-popular poppins">Most Popular</div>}
+                                                <div className="gh-addon-info gh-z-10 gh-pointer-events-none">
+                                                    <div className={`gh-flex gh-items-center gh-justify-center gh-transition-colors gh-rounded-full gh-border-2 ${isSelected ? 'gh-border-primary gh-bg-primary' : 'gh-border-gray-300'}`} style={{ width: '20px', height: '20px' }}>
+                                                        {isSelected && <Icon name="check" className="gh-icon-sm gh-text-white" />}
+                                                    </div>
+                                                    <img src={a.img} className="gh-addon-img" alt={a.name} />
+                                                    <div><div className="gh-addon-name gh-flex gh-items-center gh-gap-2">{a.name}{a.note && <span className="gh-note-tag">{a.note}</span>}</div><div className="gh-addon-sub">{a.sub}</div></div>
+                                                </div>
+                                                <div className="gh-addon-price-col gh-z-10">
+                                                    {!a.isMultiSize && <span className="gh-price-tag poppins">${(a.price * (val || a.defaultQty)).toFixed(0)}</span>}
+                                                    {isSelected && a.editable && (
+                                                        <div className="gh-flex gh-flex-col gh-gap-2" onClick={(e) => e.stopPropagation()}>
+                                                            {a.isMultiSize ? (
+                                                                a.sizes.map(sz => (
+                                                                    <div key={sz.key} className="gh-flex gh-items-center gh-justify-between gh-gap-4">
+                                                                        <span className="gh-text-xs gh-font-bold gh-text-gray-500" style={{minWidth: '90px', textAlign: 'right'}}>{sz.label}</span>
+                                                                        <div className="gh-qty-control">
+                                                                            <button className="gh-qty-btn" onClick={() => updateQty(a.id, -1, sz.key)}>-</button>
+                                                                            <span className="gh-qty-val">{val[sz.key] || 0}</span>
+                                                                            <button className="gh-qty-btn" onClick={() => updateQty(a.id, 1, sz.key)}>+</button>
+                                                                        </div>
+                                                                    </div>
+                                                                ))
+                                                            ) : (
+                                                                <div className="gh-qty-control">
+                                                                    <button className="gh-qty-btn" onClick={() => updateQty(a.id, -1)}>-</button>
+                                                                    <span className="gh-qty-val">{val}</span>
+                                                                    <button className="gh-qty-btn" onClick={() => updateQty(a.id, 1)}>+</button>
+                                                                </div>
+                                                            )}
+                                                        </div>
+                                                    )}
+                                                </div>
+                                            </div>
+                                        );
+                                    })}
+                                </div>
+                            </div>
+                        )}
+
+                        {step === 2 && (
+                            <div className="fade-in gh-pt-4">
+                                <h2 className="gh-font-black gh-text-2xl gh-text-center gh-mb-1 gh-text-dark">Lock in your appointment</h2>
+                                <div className="gh-toggle-container">
+                                    <button onClick={()=>setScheduleMode('suggested')} className={`gh-toggle-btn ${scheduleMode==='suggested'?'active':''}`}>Recommended</button>
+                                    <button onClick={()=>setScheduleMode('all')} className={`gh-toggle-btn ${scheduleMode==='all'?'active':''}`}>All Days</button>
+                                </div>
+                                
+                                {isLoadingSlots ? (
+                                    <div className="gh-flex gh-flex-col gh-items-center gh-justify-center gh-py-12">
+                                        <Icon name="loader-2" className="gh-icon-2xl gh-text-primary gh-animate-spin" />
+                                        <p className="gh-text-xs gh-font-bold gh-text-gray-400 gh-mt-4 gh-uppercase gh-tracking-wide">Calculating travel times...</p>
+                                    </div>
+                                ) : (
+                                    <div className="gh-grid gh-grid-cols-1 gh-gap-2">
+                                        {visibleDays.map(s => (
+                                            <div key={s.id} onClick={()=>setSelectedSlot(s)} className={`gh-slot-btn ${selectedSlot?.id === s.id ? 'selected' : ''}`}>
+                                                <div><span className="gh-slot-date">{s.day}</span><span className="gh-slot-time">{s.window}</span></div>
+                                                <span className="gh-tag gh-bg-gray-100 gh-px-2 gh-py-1 gh-rounded gh-uppercase gh-tracking-wide" style={{ fontSize: '10px', fontWeight: 700, color: '#4A5568' }}>{s.tag || 'Available'}</span>
+                                            </div>
+                                        ))}
+                                    </div>
+                                )}
+                            </div>
+                        )}
+
+                        {step === 3 && (
+                            <div className="fade-in gh-pt-4">
+                                <h2 className="gh-font-black gh-text-2xl gh-mb-1 gh-text-dark">Final Details</h2>
+                                <div className="gh-bg-gray-50 gh-p-4 gh-rounded-xl gh-border gh-border-gray-100 gh-mb-6 gh-flex gh-items-start gh-gap-3">
+                                    <Icon name="calendar" className="gh-icon-lg gh-text-primary gh-mt-1" />
+                                    <div><div className="gh-text-sm gh-font-bold gh-text-dark">{selectedSlot?.day || 'Date Selected'}</div><div className="gh-text-xs gh-text-gray-500">{selectedSlot?.window || 'Time Window'}</div></div>
+                                </div>
+                                <div className="gh-grid gh-grid-cols-2 gh-gap-3">
+                                    <input className="gh-input" name="firstName" placeholder="First Name" value={contactForm.firstName} onChange={handleInputChange} />
+                                    <input className="gh-input" name="lastName" placeholder="Last Name" value={contactForm.lastName} onChange={handleInputChange} />
+                                </div>
+                                <input ref={addressInputRef} className="gh-input" placeholder="Full Service Address" value={address} onChange={(e) => setAddress(e.target.value)} />
+                                <input className="gh-input" name="email" placeholder="Email Address" type="email" value={contactForm.email} onChange={handleInputChange} />
+                                <input className="gh-input" name="phone" placeholder="Mobile Phone" type="tel" value={contactForm.phone} onChange={handleInputChange} />
+                            </div>
+                        )}
+
+                        {step === 4 && (
+                            <div className="fade-in gh-text-center gh-pt-20">
+                                <div className="gh-rounded-full gh-flex gh-items-center gh-justify-center gh-mx-auto gh-mb-8 gh-shadow-xl" style={{ width: '96px', height: '96px', backgroundColor: '#E6FFFA', color: '#3D9898' }}><Icon name="check" className="gh-icon-2xl" /></div>
+                                <h2 className="gh-font-black gh-text-3xl gh-tracking-tight gh-mb-3 gh-text-dark">You're Booked!</h2>
+                                <p className="gh-text-sm gh-text-gray-500 gh-font-bold gh-px-8 gh-leading-relaxed">We've reserved your arrival window. A confirmation email has been sent to you.</p>
+                                <button onClick={()=>window.location.reload()} className="gh-text-primary gh-font-bold gh-text-sm gh-mt-8 gh-hover-underline">Start New Booking</button>
+                            </div>
+                        )}
+                    </div>
+
+                    {step < 4 && (
+                        <div className="gh-footer">
+                            <div style={{ gap: '4px', display: 'flex', flexDirection: 'column' }}>
+                                <div className="gh-total-label">Today's Total</div>
+                                <div className="gh-total-val poppins">${totals.total}</div>
+                                <div className="gh-savings-pill"><Icon name="sparkles" className="gh-icon-sm" /> Save ${(parseFloat(totals.savings) + inbound.inboundSavings).toFixed(0)} today</div>
+                            </div>
+                            <div className="gh-flex gh-items-center gh-gap-3">
+                                {step > 1 && (
+                                    <button 
+                                        onClick={() => setStep(step - 1)} 
+                                        className="gh-text-gray-500 gh-font-bold gh-text-sm gh-uppercase gh-tracking-wide gh-hover-text-primary gh-transition-colors gh-px-4 gh-py-2 gh-rounded-lg"
+                                        style={{ border: 'none', background: 'transparent' }}
+                                    >
+                                        Back
+                                    </button>
+                                )}
+                                <button 
+                                    className="gh-main-btn" 
+                                    disabled={isSubmitting || (step === 2 && !selectedSlot) || (step === 3 && !isFormValid)} 
+                                    onClick={() => step === 3 ? handleSubmit() : setStep(step + 1)}
+                                >
+                                    {isSubmitting ? (<><Icon name="loader-2" className="gh-icon-md gh-animate-spin" /><span>Booking...</span></>) : (<>{step === 1 ? 'Next Step' : (step === 3 ? 'Confirm & Book' : 'Continue')}<Icon name="arrow-right" className="gh-icon-md" /></>)}
+                                </button>
+                            </div>
+                        </div>
+                    )}
+                </div>
+            );
+        }
+
+        const root = ReactDOM.createRoot(document.getElementById('booking-hub-root'));
+        root.render(<App />);
+    </script>
+</body>
+</html>
