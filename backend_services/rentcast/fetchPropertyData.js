@@ -1,18 +1,17 @@
-require('dotenv').config({ path: '../../.env' }); // Look up two folders to find the secret .env file
+require('dotenv').config({ path: '../../.env' }); // Load variables from root .env
 
 /**
  * Fetches property data from RentCast API
- * Target outputs: squareFootage, yearBuilt, propertyType
  */
 async function getPropertyData(address) {
-    const apiKey = process.env.RENTCAST_API_KEY;
+    // We add .trim() to completely remove any hidden Windows newline characters (\r\n)
+    const apiKey = process.env.RENTCAST_API_KEY.trim(); 
     
     if (!apiKey) {
         console.error("Error: RENTCAST_API_KEY is missing from .env file.");
         return;
     }
 
-    // Format the address for the URL query
     const encodedAddress = encodeURIComponent(address);
     const url = `https://api.rentcast.io/v1/properties?address=${encodedAddress}`;
 
@@ -27,7 +26,9 @@ async function getPropertyData(address) {
         });
 
         if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
+            // This will capture the EXACT error message from RentCast's servers
+            const errorText = await response.text();
+            throw new Error(`HTTP error! status: ${response.status}\nRentCast says: ${errorText}`);
         }
 
         const data = await response.json();
@@ -39,8 +40,6 @@ async function getPropertyData(address) {
             console.log(`Square Footage: ${property.squareFootage || 'N/A'}`);
             console.log(`Year Built: ${property.yearBuilt || 'N/A'}`);
             console.log(`Property Type: ${property.propertyType || 'N/A'}`);
-            // Note: RentCast rarely returns 'stories', which is why we will 
-            // rely on Gemini Vision for height extrapolation next!
             
             return {
                 squareFootage: property.squareFootage,
@@ -53,10 +52,9 @@ async function getPropertyData(address) {
         }
 
     } catch (error) {
-        console.error("Failed to fetch property data:", error);
+        console.error("Failed to fetch property data:\n", error.message);
     }
 }
 
-// --- Test the function ---
-// Let's test it with a real address in your market
-getPropertyData("3163 Red Apple Pl, Castle Rock, CO 80104");
+// Notice the added comma between CO and the Zip code to perfectly match RentCast docs
+getPropertyData("1202 Wildcat Bend Ct, Castle Rock, CO 80108");
