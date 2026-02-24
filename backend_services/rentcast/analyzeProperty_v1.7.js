@@ -21,7 +21,14 @@ function calculateParametricBaseline(agsf, bgsf, basementBeds, yearBuilt) {
 
     // Guardrail: Large Picture/Sliders typically range 6-12 for this footprint
     const largeGlassBaseline = (agsf > 4000) ? 12 : 6;
+	
+// Calculate Screens/Tracks based on Units, not Panes
+const stdUnits = Math.floor((data.house_panes.level_1_standard + data.house_panes.level_2_standard) / 2);
+const sliderScreens = data.house_panes.slider_units; // 1 per door
+const egressScreens = Math.floor(data.basement_panes / 2); // 1 per egress window
 
+// The "29" Calculation
+const totalScreens = (stdUnits - 2) + sliderScreens + egressScreens + 1; // +1 for the Storm Door
     return { houseTotal, garageBaseline, basementPanes, largeGlassBaseline };
 }
 
