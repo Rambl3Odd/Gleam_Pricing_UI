@@ -11,7 +11,7 @@ The architecture utilizes a Hub-and-Spoke model. Data is captured via peripheral
 ### 🔴 INTAKE SPOKES (Frontend & Conversational)
 **Spokes 1A, 1B, 1C: Domain-Specific Estimators (Window & Glass Care, Exterior Surface Washing, Homecare & Maintenance)**
 * **Objective:** Low-friction, domain-specific lead capture.
-* **Functional:** Lite UIs configured to prioritize the specific service group the user navigated to. Utilizes proxy questions (not exact counts) to generate estimates.
+* **Functional:** Lite UIs configured to prioritize the specific service group the user navigated to within the squarespace webpage getgleaming.com. Utilizes proxy questions (not exact counts) to generate estimates.
 * **Technical:** Sends data via `sessionStorage` or base64 URL to the Central Booking Hub. No scheduling or API quoting occurs here; purely structural Vanilla JS.
 
 **Spoke 2: Quo (Sona) Voice & SMS Agent**
@@ -136,7 +136,89 @@ Your entry must follow this format:
 
 ---
 
-## 10. Change Log History
+## 10. Gleam Digital Architecture: Squarespace Site Map
+
+[ROOT: HOME PAGE]
+|-- Hero: "Gleam-Gold" Primary CTA (Get Online Estimate)
+|-- Trust Bar: LocalBusiness Schema / Compliance Badges (IWCA/PWNA)
+|-- Asset Preservation Narrative: "From Cleaning to Structural Preservation"
+|
+|---- [TIER 1 QUOTING ENGINE: SUB-60 SECOND FLOW]
+|     |-- Step 1: Zip Code / Data Binning (SqFt Brackets)
+|     |-- Step 2: Instant Ballpark Range (Asynchronous Pricing Logic)
+|     |-- Step 3: Tier 2 Detailed/Bind Quote (Contact Capture Lock-in)
+|
+|---- [RESIDENTIAL SERVICES]
+|     |-- Window & Glass Care
+|     |   |-- Exterior/Interior Detailing
+|     |   |-- Track Detailing & Screen Repair
+|     |   |-- Nano-Ceramic Tinting (UV Protection Focus)
+|     |-- Exterior Surface Washing
+|     |   |-- Softwashing (Roof & Siding Preservation)
+|     |   |-- Pressure Washing (Restoration for Decks/Driveways)
+|     |-- Home Care & Maintenance
+|     |   |-- Gutter Cleaning (Water Diversion)
+|     |   |-- Solar Panel Efficiency Restore (ROI-Focused)
+|     |   |-- Dryer Vent Fire Prevention (Safety-Critical)
+|
+|---- [COMMERCIAL SERVICES]
+|     |-- Storefront Maintenance Programs
+|     |-- Multi-Site Management
+|     |-- Reliability & First Impression Branding
+|
+|---- [GLEAM-ON MEMBERSHIP](To be added at later phase)
+|     |-- The "Credit Wallet" Hub
+|     |-- Maintenance Ecosystem (Lawn, Snow, Local Partners)
+|     |-- Predictable MRR Enrollment
+|
+|---- [PARTNER PORTALS](To be added at later phase)
+|     |-- Realtor Portal (Listing Linda)
+|     |   |-- Listing Prep Verification
+|     |   |-- Before/After Documentation
+|     |-- Commercial Property Manager Hub
+|
+|---- [REGIONAL LANDING PAGES (SEO CLUSTERS)]
+|     |-- Castle Rock, CO
+|     |-- Highlands Ranch, CO
+|     |-- Tri-Cities, WA
+|
+|---- [THE GLEAM GUARANTEE]
+|     |-- 100% Satisfaction Policy
+|     |-- 5x5 Spot-Free Guarantee
+|     |-- Price Lock Transparency
+|
+|---- [ABOUT & SOCIAL MISSION]
+      |-- Inclusive Hiring Model
+      |-- Community Equity & Career Paths
+
+STRATEGY IMPLEMENTATION
+
+* *STRATEGIC POSITIONING:
+   * Pivot from "discretionary luxury" (cleaning) to "essential maintenance" 
+     (preservation). Frame UV exposure, wildfire ash, and mineralization as 
+     structural threats to home equity.
+
+* *CONVERSION OPTIMIZATION (CRO):
+   * Use one color EXCLUSIVELY for conversion buttons.
+   * Implement a "Sticky Footer" with a 44x44 pixel "Thumb Zone" CTA for mobile.
+   * Utilize "Progressive Disclosure" to prevent cognitive overload.
+
+* *QUOTING LOGIC:
+   * Employ "Data Binning" for square footage to minimize user friction.
+   * Gate the "Binding Quote" behind contact capture (Psychology of Sunk Cost).
+
+* *RETENTION & LTV:
+   * Transition customers to the "Gleam-On" ecosystem using a credit-wallet 
+     concept to increase Lifetime Value and brand stickiness.
+
+* *TECHNICAL FORTIFICATION:
+   * Implement FAQPage and LocalBusiness Schema to optimize for AEO 
+     (AI Answer Engines like Gemini/Perplexity) and the "Zero-Click" era.
+   * Hyper-local landing pages to dominate specific regional search volumes.
+
+---
+
+## 11. Change Log History
 
 **📋 CHANGE LOG ENTRY:**
 * **Date/Time:** February 24, 2026
