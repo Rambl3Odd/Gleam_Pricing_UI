@@ -1,0 +1,107 @@
+# 🛠️ Gleam Booking Hub -> ServiceM8 | Make.com Master Blueprint
+**Last Updated:** February 24, 2026
+**Architecture:** Webhook -> Company -> Contact -> Job -> [Notes (Bypassed)] -> Iterator -> Job Materials
+
+---
+
+## 🟢 1. Webhook (Trigger)
+* **Module Type:** Webhooks > Custom Webhook
+* **Webhook URL:** `https://hook.us2.make.com/wprk61uaaa1jvii7bsrxto5k64y36pny`
+* **Method:** POST
+* **Expected Payload:** Gleam Central Booking Hub JSON (Contains `contact`, `address`, `booking`, `details`, `financials`, and `line_items[]` array).
+
+---
+
+## 🟢 2. Create Company (Module 188)
+* **Module Type:** ServiceM8 > Make an API Call
+* **URL:** `/api_1.0/company.json`
+* **Method:** POST
+* **Headers:** * `Content-Type` : `application/json`
+* **Body:**
+```json
+{
+  "name": "{{2.contact.lastName}} Residence",
+  "is_individual": 1,
+  "address_street": "{{2.property.street}}",
+  "address_city": "{{2.property.city}}",
+  "address_state": "{{2.property.state}}",
+  "address_postcode": "{{2.property.zip}}",
+  "address_country": "United States",
+  "billing_address_street": "{{2.property.street}}",
+  "billing_address_city": "{{2.property.city}}",
+  "billing_address_state": "{{2.property.state}}",
+  "billing_address_postcode": "{{2.property.zip}}",
+  "billing_address_country": "United States",
+  "customfield_property_type": "{{2.property.type}}",
+  "customfield_referral_source": "{{2.contact.referral_source}}"
+}
+
+
+3. Create Contact (Module 189)
+Module Type: ServiceM8 > Make an API Call
+URL: /api_1.0/companycontact.json
+Method: POST
+Headers: Content-Type : application/json
+{
+  "company_uuid": "{{188.body.uuid}}",
+  "first": "{{2.contact.firstName}}",
+  "last": "{{2.contact.lastName}}",
+  "email": "{{2.contact.email}}",
+  "mobile": "{{2.contact.phone}}",
+  "type": "Job Contact",
+  "is_primary": 1
+}
+
+
+4. Create Job (Module 190)
+Module Type: ServiceM8 > Make an API Call
+URL: /api_1.0/job.json
+Method: POST
+Headers: Content-Type : application/json
+{
+  "company_uuid": "{{188.body.uuid}}",
+  "status": "Quote",
+  "job_address_street": "{{2.property.street}}",
+  "job_address_city": "{{2.property.city}}",
+  "job_address_state": "{{2.property.state}}",
+  "job_address_postcode": "{{2.property.zip}}",
+  "job_address_country": "United States",
+  "customfield_lead_source": "{{2.marketing_attribution.source}}",
+  "customfield_quote_type": "{{2.booking.quote_type}}",
+  "customfield_stories": "{{2.details.stories}}",
+  "customfield_soiling_level": "{{2.details.soiling_level}}",
+  "customfield_gleamon_plan": "{{2.details.gleamon_plan}}",
+  "customfield_booking_zip": "{{2.property.zip}}",
+  "job_description": "--- GLEAM QUOTE DETAILS ---\nType: {{2.booking.quote_type}}\nRequested Date: {{2.booking.date}} @ {{2.booking.window}}\n\n--- SITE NOTES ---\nProperty: {{2.details.stories}} Stories | {{2.details.homeSize}} SqFt\nEst. Panes: {{2.details.panes}}\nSoiling Level: {{2.details.soiling_level}}\nAccess Difficulty: {{2.details.access_difficulty}}\nEst. Onsite Time: {{2.details.onsiteTime}}\n\n--- SOURCE ---\nUTM Source: {{2.marketing_attribution.source}} | Campaign: {{2.marketing_attribution.campaign}}"
+}
+
+
+5. Create Job Notes (Module 201)
+Module Type: ServiceM8 > Make an API Call
+URL: /api_1.0/note.json
+Method: POST
+Headers: Content-Type : application/json
+
+{
+  "related_object": "job",
+  "related_object_uuid": "{{190.body.uuid}}",
+  "note": "⚠️ UPSELL OPPORTUNITY FLAGGED BY QUOTING ENGINE: The system has flagged this property as a strong candidate for: {{2.upsells.flagged}}. Techs, please visually verify on-site and pitch appropriately."
+}
+
+6. Estimate Line Items (Module 191)
+Module Type: Flow Control > Iterator
+Array: {{2.line_items}}
+
+7. Job Materials (Module 195)
+URL: /api_1.0/jobmaterial.json
+Method: POST
+Headers: Content-Type : application/json
+
+{
+  "job_uuid": "{{190.body.uuid}}",
+  "name": "{{191.name}}",
+  "price": {{round(191.price; 2)}},
+  "quantity": {{191.qty}}
+}
+
+curl -X POST "https://hook.us2.make.com/wprk61uaaa1jvii7bsrxto5k64y36pny" -H "Content-Type: application/json" -H "x-gleam-auth: GleamSecure2026!" -d @"C:\Users\Mini\OneDrive\Desktop\gleam-self-serve-pricing-tool\Gleam_Pricing_UI\make.com_scenerio\payload.json"
