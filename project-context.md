@@ -303,3 +303,43 @@ STRATEGY IMPLEMENTATION
 * **What Was Changed:** Expanded the Analytics and DevSecOps section to encompass a "World-Class" marketing data architecture. Added requirements for UTM persistence via `sessionStorage`, Dual-Tracking Deduplication using shared `event_id`s, Google Ads Enhanced Conversions (SHA-256 hashing via Make.com), Google Business Profile UTM hardcoding, Dynamic Number Insertion (DNI) for Sona voice attribution, and Google Consent Mode v2 compliance.
 * **Why It Was Changed:** To bridge the gap between operational job routing and marketing ROI. These additions ensure that as Gleam scales ad spend across Meta, Google Ads, and LSA, the architecture can flawlessly attribute revenue back to the exact campaign, bypassing cookie-blockers without violating the Colorado Privacy Act.
 * **Current State/Next Steps:** The system context is now fully fortified with both operational and advanced marketing analytics constraints. The recommended next step is to implement the UTM Persistence script and the Make.com API Client fetch logic on the frontend.
+
+**📋 CHANGE LOG ENTRY:**
+* **Date/Time:** February 24, 2026
+* **Files Modified:** `/booking_hub_widget/js/state-manager.js` (New File), `/booking_hub_widget/booking-hub-widget_v3.4.0.html` (Reviewed)
+* **What Was Changed:** Initiated the modular teardown of the Central Booking Hub. Stripped the React/Babel dependency and extracted the state, dynamic upsell logic, and payload assembly into a Vanilla JS `state-manager.js` file. Added logic to parse `sessionStorage` for both the Digital Twin JSON and UTM marketing parameters.
+* **Why It Was Changed:** To strictly enforce the Vanilla JS mandate across all frontend components, drastically improve widget load times (by removing React libraries), and ensure UTM tracking data persists from the lead capture spoke into the final ServiceM8 webhook payload.
+* **Current State/Next Steps:** The Booking Hub's "Brain" is now modular. The next step is to create `api-client.js` for the Booking Hub to handle the final Make.com booking trigger and availability schedule fetches.
+
+**📋 CHANGE LOG ENTRY:**
+* **Date/Time:** February 24, 2026
+* **Files Modified:** `/booking_hub_widget/js/api-client.js` (New File)
+* **What Was Changed:** Extracted the API communication logic from the legacy React Booking Hub into a standalone Vanilla JS API Client. Implemented `fetchAvailability` and `submitBooking` methods, both enforcing the `x-gleam-auth` custom HTTP header for Make.com webhook security.
+* **Why It Was Changed:** To fulfill Section 8 DevSecOps constraints (Webhook Security via custom headers) and separate the network/API layer from the UI to prevent frontend rendering crashes during backend timeouts.
+* **Current State/Next Steps:** The Booking Hub's "Brain" and "Messenger" are isolated. The next step is to create the Vanilla JS `ui-components.js` file to replace the React DOM rendering, which will handle the final visual step-wizard, calendar rendering, and form validation.
+
+**📋 CHANGE LOG ENTRY:**
+* **Date/Time:** February 24, 2026
+* **Files Modified:** `/booking_hub_widget/js/ui-components.js` (New File)
+* **What Was Changed:** Extracted all DOM rendering logic from the React-based Booking Hub into a strictly Vanilla JS file. Created a modular render cycle (`renderTopBar`, `renderProgress`, `renderStep1-4`) and bound it to `window.BookingControllers`. Integrated Google Places Autocomplete and Lucide icons natively.
+* **Why It Was Changed:** To completely eliminate React/Babel dependencies, ensuring compliance with Section 8 frontend guardrails while increasing load speeds and maintainability. It prevents the UI from controlling any mathematical logic, enforcing the Single Responsibility Principle.
+* **Current State/Next Steps:** The Booking Hub is now functionally modularized into logic components. The final step is to tear down `booking-hub-widget_v3.4.0.html` into a stripped-down `index.html` skeleton that loads these three `.js` modules.
+
+**📋 CHANGE LOG ENTRY:**
+* **Date/Time:** February 24, 2026
+* **Files Modified:** `/booking_hub_widget/index.html` (formerly `booking-hub-widget_v3.4.0.html`)
+* **What Was Changed:** Gutted the legacy monolithic React HTML file. Created a clean HTML skeleton containing strictly scoped CSS classes, empty UI container `<div>` tags, and standard script imports linking the new modular `state-manager.js`, `api-client.js`, and `ui-components.js` files. Included necessary third-party scripts (Lucide Icons, Google Maps API) in the `<head>`.
+* **Why It Was Changed:** To complete the structural teardown of the Central Booking Hub. This fully realizes the Hub-and-Spoke decoupled frontend architecture described in the project context, perfectly mirroring the Estimator Spoke's Vanilla JS standard.
+* **Current State/Next Steps:** Both the Estimator and Booking Hub frontends are now fully modular and "AI-safe." The next operational step is to return to the backend infrastructure to configure the Make.com webhook endpoints (Phase 4.1) and ensure data flows successfully from the Estimator -> Booking Hub -> Make.com ServiceM8 routing.
+
+**📋 CONSOLIDATED CHANGE LOG ENTRY:**
+* **Date:** February 24, 2026
+* **Project:** Make.com Scenario (ServiceM8 API Integration)
+* **Modules Modified:** Create Company, Create Contact, Create Job, Job Notes, Estimate Line Items (Iterator), Job Materials.
+
+6. **Workflow Rerouting & Job Materials Troubleshooting:**
+   * *Change:* Temporarily removed the "Job Notes" module from the active sequence, routing the workflow directly from "Create Job" to "Estimate Line Items" (Iterator) and "Job Materials". Identified ongoing mapping and calculation issues within the "Job Materials" JSON body.
+   * *Why:* The Notes module continued to block execution and requires isolated troubleshooting later. The Job Materials module is actively rejecting payloads with a `[400] Provided displayed_amount is incorrect. Expected [257]` error. This indicates that the submitted field mapping for price/quantity does not perfectly align with ServiceM8's internal server-side math calculations, triggering an accounting validation block.
+
+* **Current State/Next Steps:** The workflow is streamlined to bypass the Notes error. The immediate next priority is auditing and remapping the `Job Materials` JSON body to ensure the fields calculate exactly to ServiceM8's expected `displayed_amount`.
+
