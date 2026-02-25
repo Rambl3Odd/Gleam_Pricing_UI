@@ -1,0 +1,473 @@
+[
+    {
+        "body": [
+            {
+                "uuid": "e28f6579-bc5e-4c4e-9903-21658481852b",
+                "edit_date": "2024-05-28 18:02:39",
+                "active": 1,
+                "file_name": "badges_large_001.png",
+                "automatically_allocated": 0,
+                "regarding_form_uuid": "",
+                "name": "Warranty"
+            },
+            {
+                "uuid": "bfdba980-83ff-4406-9df5-21658f776dbb",
+                "edit_date": "2026-02-22 00:40:01",
+                "active": 0,
+                "file_name": "badges_large_002.png",
+                "automatically_allocated": 0,
+                "regarding_form_uuid": "",
+                "name": "VIP"
+            },
+            {
+                "uuid": "3bc5fb61-9bb4-48dd-b753-21658233471b",
+                "edit_date": "2026-02-22 00:39:33",
+                "active": 0,
+                "file_name": "badges_large_003.png",
+                "automatically_allocated": 0,
+                "regarding_form_uuid": "",
+                "name": "Take Payment Facilities"
+            },
+            {
+                "uuid": "5843f453-3f41-4c2f-99a5-21658610911b",
+                "edit_date": "2026-02-22 00:38:54",
+                "active": 1,
+                "file_name": "badges_large_004.png",
+                "automatically_allocated": 0,
+                "regarding_form_uuid": "",
+                "name": "Multi-story Building"
+            },
+            {
+                "uuid": "66130226-b7c7-4b93-b259-21658a99690b",
+                "edit_date": "2026-02-22 00:39:42",
+                "active": 0,
+                "file_name": "badges_large_005.png",
+                "automatically_allocated": 0,
+                "regarding_form_uuid": "",
+                "name": "Pre-Launch"
+            },
+            {
+                "uuid": "e237b2c2-1ca1-4cce-8df7-2165843659bb",
+                "edit_date": "2024-07-09 14:20:40",
+                "active": 1,
+                "file_name": "badges_large_006.png",
+                "automatically_allocated": 0,
+                "regarding_form_uuid": "",
+                "name": "Call Before Arrival"
+            },
+            {
+                "uuid": "b82f6aaf-01f1-4b35-8d6d-216581441a8b",
+                "edit_date": "2026-02-22 00:40:23",
+                "active": 1,
+                "file_name": "badges_large_007.png",
+                "automatically_allocated": 0,
+                "regarding_form_uuid": "",
+                "name": "Bright Block"
+            },
+            {
+                "uuid": "cb4929cf-8436-470b-82bf-21658d836dab",
+                "edit_date": "2024-05-28 18:02:39",
+                "active": 0,
+                "file_name": "badges_large_010.png",
+                "automatically_allocated": 0,
+                "regarding_form_uuid": "",
+                "name": "Bad Payer"
+            },
+            {
+                "uuid": "b94dc602-578d-44bc-a5ff-216581b7619b",
+                "edit_date": "2024-05-28 18:02:39",
+                "active": 0,
+                "file_name": "badges_large_011.png",
+                "automatically_allocated": 0,
+                "regarding_form_uuid": "",
+                "name": "Backup Data"
+            },
+            {
+                "uuid": "6bfa211c-c0c5-430d-b8c0-21658b767cbb",
+                "edit_date": "2024-05-28 18:02:39",
+                "active": 0,
+                "file_name": "badges_large_012.png",
+                "automatically_allocated": 0,
+                "regarding_form_uuid": "",
+                "name": "Good Payer"
+            },
+            {
+                "uuid": "ecd1f488-5ef8-4294-aa98-21658689417b",
+                "edit_date": "2024-07-09 14:21:05",
+                "active": 1,
+                "file_name": "badges_large_013.png",
+                "automatically_allocated": 0,
+                "regarding_form_uuid": "",
+                "name": "Discount Percentage"
+            },
+            {
+                "uuid": "58b18db7-c2d7-445f-8d95-2165853ea88b",
+                "edit_date": "2024-05-28 18:02:39",
+                "active": 0,
+                "file_name": "badges_large_014.png",
+                "automatically_allocated": 0,
+                "regarding_form_uuid": "",
+                "name": "Request Picture"
+            },
+            {
+                "uuid": "dcf13b71-b2e3-46b9-ae8b-21658e1213cb",
+                "edit_date": "2024-07-09 14:20:19",
+                "active": 1,
+                "file_name": "badges_large_016.png",
+                "automatically_allocated": 0,
+                "regarding_form_uuid": "",
+                "name": "Over 20 Miles"
+            },
+            {
+                "uuid": "e9879f25-cafa-45a4-bc6d-216587c56cbb",
+                "edit_date": "2024-07-09 14:20:22",
+                "active": 1,
+                "file_name": "badges_large_015.png",
+                "automatically_allocated": 0,
+                "regarding_form_uuid": "",
+                "name": "Over 40 Miles"
+            },
+            {
+                "uuid": "90970e5b-c825-4c30-b726-216589b6d56b",
+                "edit_date": "2024-05-28 18:02:39",
+                "active": 0,
+                "file_name": "badges_large_101.png",
+                "automatically_allocated": 0,
+                "regarding_form_uuid": "",
+                "name": "Found Us Via Newspaper"
+            },
+            {
+                "uuid": "c9b237a0-a420-4347-b377-21658eea488b",
+                "edit_date": "2024-05-28 18:02:39",
+                "active": 0,
+                "file_name": "badges_large_102.png",
+                "automatically_allocated": 0,
+                "regarding_form_uuid": "",
+                "name": "Found Us Via TV"
+            },
+            {
+                "uuid": "45045789-5404-4a79-8248-21658c587a2b",
+                "edit_date": "2024-07-20 00:13:06",
+                "active": 1,
+                "file_name": "badges_large_103.png",
+                "automatically_allocated": 0,
+                "regarding_form_uuid": "",
+                "name": "Found Us Via Internet"
+            },
+            {
+                "uuid": "9d5d2531-dce8-4e54-a370-21658cc84cfb",
+                "edit_date": "2024-07-20 00:14:15",
+                "active": 1,
+                "file_name": "badges_large_104.png",
+                "automatically_allocated": 0,
+                "regarding_form_uuid": "",
+                "name": "Found Us Via Google"
+            },
+            {
+                "uuid": "6f1c728c-0701-4b60-b43d-21658417517b",
+                "edit_date": "2024-05-28 18:02:39",
+                "active": 0,
+                "file_name": "badges_large_105.png",
+                "automatically_allocated": 0,
+                "regarding_form_uuid": "",
+                "name": "Found Us Via Yellow Pages"
+            },
+            {
+                "uuid": "43b1114c-b976-4e72-923b-21658cc9a21b",
+                "edit_date": "2024-05-28 18:02:39",
+                "active": 0,
+                "file_name": "badges_large_106.png",
+                "automatically_allocated": 0,
+                "regarding_form_uuid": "",
+                "name": "Found Us Via Radio"
+            },
+            {
+                "uuid": "f5a335bc-795b-4a84-9073-216588d72fdb",
+                "edit_date": "2024-07-20 00:14:38",
+                "active": 1,
+                "file_name": "badges_large_201.png",
+                "automatically_allocated": 0,
+                "regarding_form_uuid": "",
+                "name": "Call for Quote"
+            },
+            {
+                "uuid": "591c95a8-3e9c-48c7-ac3a-21658933c9cb",
+                "edit_date": "2024-07-20 00:13:27",
+                "active": 1,
+                "file_name": "badges_large_202.png",
+                "automatically_allocated": 0,
+                "regarding_form_uuid": "",
+                "name": "Online Quote"
+            },
+            {
+                "uuid": "dd97fe67-ba3a-4063-b780-216584ad085b",
+                "edit_date": "2024-05-28 18:02:39",
+                "active": 0,
+                "file_name": "badges_large_203.png",
+                "automatically_allocated": 0,
+                "regarding_form_uuid": "",
+                "name": "Fax"
+            },
+            {
+                "uuid": "a78a15c9-fee0-41c3-927e-216581b9c22b",
+                "edit_date": "2025-07-17 15:15:31",
+                "active": 1,
+                "file_name": "badges_large_204.png",
+                "automatically_allocated": 0,
+                "regarding_form_uuid": "",
+                "name": "Online"
+            },
+            {
+                "uuid": "d257dba5-97dc-4ef3-b336-21658b275c0b",
+                "edit_date": "2024-05-28 18:02:39",
+                "active": 0,
+                "file_name": "badges_large_205.png",
+                "automatically_allocated": 0,
+                "regarding_form_uuid": "",
+                "name": "Shop Front"
+            },
+            {
+                "uuid": "4341f52a-b615-432d-a325-21658a64c57b",
+                "edit_date": "2024-05-28 18:02:39",
+                "active": 0,
+                "file_name": "badges_large_206.png",
+                "automatically_allocated": 0,
+                "regarding_form_uuid": "",
+                "name": "Mail"
+            },
+            {
+                "uuid": "99031d39-e30e-47be-95d3-2165896955eb",
+                "edit_date": "2024-05-28 18:02:39",
+                "active": 0,
+                "file_name": "badges_large_207.png",
+                "automatically_allocated": 0,
+                "regarding_form_uuid": "",
+                "name": "Blacklisted"
+            },
+            {
+                "uuid": "19ad39ef-7b6d-45bc-b819-216582ad255b",
+                "edit_date": "2024-05-28 18:02:39",
+                "active": 0,
+                "file_name": "badges_large_208.png",
+                "automatically_allocated": 0,
+                "regarding_form_uuid": "",
+                "name": "Pickup Keys"
+            },
+            {
+                "uuid": "3c68896d-227d-4a24-acfb-21658c94673b",
+                "edit_date": "2024-05-28 18:02:39",
+                "active": 0,
+                "file_name": "badges_large_209.png",
+                "automatically_allocated": 0,
+                "regarding_form_uuid": "",
+                "name": "4x4"
+            },
+            {
+                "uuid": "3532432f-c28b-43e8-a6c5-216586b370fb",
+                "edit_date": "2024-07-20 00:13:40",
+                "active": 1,
+                "file_name": "badges_large_210.png",
+                "automatically_allocated": 0,
+                "regarding_form_uuid": "",
+                "name": "Found Us Via Facebook"
+            },
+            {
+                "uuid": "b3bca640-fa99-427d-87e2-223f10ff77fb",
+                "edit_date": "2025-01-02 16:25:48",
+                "active": 1,
+                "file_name": "badges_large_301.png",
+                "automatically_allocated": 0,
+                "regarding_form_uuid": "",
+                "name": "2 Week Follow-up"
+            },
+            {
+                "uuid": "c9941e7e-845a-4182-8761-223f157b4bfb",
+                "edit_date": "2025-01-02 16:25:48",
+                "active": 1,
+                "file_name": "badges_large_302.png",
+                "automatically_allocated": 0,
+                "regarding_form_uuid": "",
+                "name": "1 Month Follow-up"
+            },
+            {
+                "uuid": "f6680714-f062-4e62-b330-223f1d028dbb",
+                "edit_date": "2025-01-02 16:25:48",
+                "active": 1,
+                "file_name": "badges_large_303.png",
+                "automatically_allocated": 0,
+                "regarding_form_uuid": "",
+                "name": "3 Month Follow-up"
+            },
+            {
+                "uuid": "b359fd88-2621-468b-b2ec-223f1093957b",
+                "edit_date": "2025-01-02 16:25:48",
+                "active": 1,
+                "file_name": "badges_large_304.png",
+                "automatically_allocated": 0,
+                "regarding_form_uuid": "",
+                "name": "6 Month Follow-up"
+            },
+            {
+                "uuid": "4e036b3f-d03f-4096-8cea-223f16ef600b",
+                "edit_date": "2025-01-02 16:25:48",
+                "active": 1,
+                "file_name": "badges_large_305.png",
+                "automatically_allocated": 0,
+                "regarding_form_uuid": "",
+                "name": "1 Year Follow-up"
+            },
+            {
+                "uuid": "f25394a6-260f-447d-bee1-223f1f07420b",
+                "edit_date": "2025-01-02 16:45:58",
+                "active": 0,
+                "file_name": "badges_large_401.png",
+                "automatically_allocated": 0,
+                "regarding_form_uuid": "",
+                "name": "Burn List"
+            },
+            {
+                "uuid": "11d3cea1-10e8-4d16-941d-2266edc75e8b",
+                "edit_date": "2025-02-09 23:26:21",
+                "active": 1,
+                "file_name": "https://servicem8-nvc.s3.us-west-1.amazonaws.com/servicem8_06f90d/custom-badge-images/badge_11d3cea1-10e8-4d16-941d-2266edc75e8b.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEEYaCXVzLXdlc3QtMSJIMEYCIQDUONtWswjtRv5iisttNJpqyzDtc%2BtrNU7mhpEEIzyJpQIhAMBrUdhfEMmb47yoN9SQ3y6xBmymFIMp1udgPLfO8ziaKu0DCA8QABoMNTc2MDQzNTAxMjQwIgx9rXuZ2wJdnAD0hdEqygMXfzNJrnZEva807nVtTZoXlrJO%2BRJST2xI0NJ3OtGeCCuJeCW3dMD5KJfWdezadlgPCMKaOYf4W1XwJbxjrSy4dgmM7a8HFH%2BKFeOOJMVgrS%2F86qpaGHRCJGYARaBejDewnSgFQ7rQLe9chkCi4hMz5g%2FOERU4YtEqM1Iy6pdaqGb2qvcFMu%2Fs43AkGTm40tY4vjsyaZX2kxrjTTF4AWJv1YcFxou0mfNiqKY2FHqLvJ%2F4sO02YzP%2BcKCSQeZI76TU%2BvF6wVz3ijJq6c1V1Zcre0FjB%2BykkGu61JPgv7BszPCGYWnBYk%2ByKVkd5JfcoqdmwVx%2Blk3UfWmXrhcRHN8twXRKjryf5hRolSweEK2YzodkiBe0066b%2BUSJfuP794SDcfvBRav5M54PHoW00pB3Csf2TwMqxfyp9XJ67TCiGLK45HPNGOSqo5vKEgTHuJrETIAU9P%2BgsIJGaO5ZuBhTiwgxi9VJYCN4yXOfSk%2FDMrEuFf9VFbv%2F%2FYISYX1omiC1sMHyn7shniPrEShzvZP5qq7ABODpqVAk6F1BBR0ZKNKWnpoAeTaifxSMiEEHxS76dqq9Zad%2BSHEzlPcXAgdP7h4N7PqKkSdUQjCKgvzMBjqkAR0DF8lEWVx2ql2ra3ZE5l4Wy8H%2FnE2jptZLWqt4Uy1lVa5ykB4rtjS5FTbAkLyiHI7xZyqmgYBfQpjjNzcj2JjVCpM%2BD1u70c2tTwEOkPZzfbHeoU%2Bq8akTGux6VbdZznv95%2BESwNdK4FsjVBJUG6nYUO7VJerhozt7YggF0pZUXGMZBETrBlpLfi3pM%2F5yuRc1p4AAJ6muIcZ2Ptu0ZE6yeptz&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=ASIAYMHW6I24MZM6UGGP%2F20260225%2Fus-west-1%2Fs3%2Faws4_request&X-Amz-Date=20260225T154348Z&X-Amz-SignedHeaders=host&X-Amz-Expires=86400&X-Amz-Signature=f614fd3dc18603839f4aa86415a831fe6f89c6bd1de3ef884312ff5d5323c43c",
+                "automatically_allocated": 0,
+                "regarding_form_uuid": "0bff0344-cc2b-472c-b89c-2266e447023b",
+                "name": "Variation"
+            },
+            {
+                "uuid": "a247207e-8b5d-4450-b19e-2266e987521b",
+                "edit_date": "2025-02-09 23:26:23",
+                "active": 1,
+                "file_name": "https://servicem8-nvc.s3.us-west-1.amazonaws.com/servicem8_06f90d/custom-badge-images/badge_a247207e-8b5d-4450-b19e-2266e987521b.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEEYaCXVzLXdlc3QtMSJIMEYCIQDUONtWswjtRv5iisttNJpqyzDtc%2BtrNU7mhpEEIzyJpQIhAMBrUdhfEMmb47yoN9SQ3y6xBmymFIMp1udgPLfO8ziaKu0DCA8QABoMNTc2MDQzNTAxMjQwIgx9rXuZ2wJdnAD0hdEqygMXfzNJrnZEva807nVtTZoXlrJO%2BRJST2xI0NJ3OtGeCCuJeCW3dMD5KJfWdezadlgPCMKaOYf4W1XwJbxjrSy4dgmM7a8HFH%2BKFeOOJMVgrS%2F86qpaGHRCJGYARaBejDewnSgFQ7rQLe9chkCi4hMz5g%2FOERU4YtEqM1Iy6pdaqGb2qvcFMu%2Fs43AkGTm40tY4vjsyaZX2kxrjTTF4AWJv1YcFxou0mfNiqKY2FHqLvJ%2F4sO02YzP%2BcKCSQeZI76TU%2BvF6wVz3ijJq6c1V1Zcre0FjB%2BykkGu61JPgv7BszPCGYWnBYk%2ByKVkd5JfcoqdmwVx%2Blk3UfWmXrhcRHN8twXRKjryf5hRolSweEK2YzodkiBe0066b%2BUSJfuP794SDcfvBRav5M54PHoW00pB3Csf2TwMqxfyp9XJ67TCiGLK45HPNGOSqo5vKEgTHuJrETIAU9P%2BgsIJGaO5ZuBhTiwgxi9VJYCN4yXOfSk%2FDMrEuFf9VFbv%2F%2FYISYX1omiC1sMHyn7shniPrEShzvZP5qq7ABODpqVAk6F1BBR0ZKNKWnpoAeTaifxSMiEEHxS76dqq9Zad%2BSHEzlPcXAgdP7h4N7PqKkSdUQjCKgvzMBjqkAR0DF8lEWVx2ql2ra3ZE5l4Wy8H%2FnE2jptZLWqt4Uy1lVa5ykB4rtjS5FTbAkLyiHI7xZyqmgYBfQpjjNzcj2JjVCpM%2BD1u70c2tTwEOkPZzfbHeoU%2Bq8akTGux6VbdZznv95%2BESwNdK4FsjVBJUG6nYUO7VJerhozt7YggF0pZUXGMZBETrBlpLfi3pM%2F5yuRc1p4AAJ6muIcZ2Ptu0ZE6yeptz&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=ASIAYMHW6I24MZM6UGGP%2F20260225%2Fus-west-1%2Fs3%2Faws4_request&X-Amz-Date=20260225T154348Z&X-Amz-SignedHeaders=host&X-Amz-Expires=86400&X-Amz-Signature=215d7d152e05ac2fa91e9b6a6c28e82312b1cf2fee9c8ff40698d418c02f1ce5",
+                "automatically_allocated": 0,
+                "regarding_form_uuid": "1fa03a77-0e4f-4bcd-858b-2266ef644b6b",
+                "name": "ATP"
+            },
+            {
+                "uuid": "dc2bd557-7d63-405e-9460-2266ed1b25db",
+                "edit_date": "2025-02-09 23:26:25",
+                "active": 1,
+                "file_name": "https://servicem8-nvc.s3.us-west-1.amazonaws.com/servicem8_06f90d/custom-badge-images/badge_dc2bd557-7d63-405e-9460-2266ed1b25db.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEEYaCXVzLXdlc3QtMSJIMEYCIQDUONtWswjtRv5iisttNJpqyzDtc%2BtrNU7mhpEEIzyJpQIhAMBrUdhfEMmb47yoN9SQ3y6xBmymFIMp1udgPLfO8ziaKu0DCA8QABoMNTc2MDQzNTAxMjQwIgx9rXuZ2wJdnAD0hdEqygMXfzNJrnZEva807nVtTZoXlrJO%2BRJST2xI0NJ3OtGeCCuJeCW3dMD5KJfWdezadlgPCMKaOYf4W1XwJbxjrSy4dgmM7a8HFH%2BKFeOOJMVgrS%2F86qpaGHRCJGYARaBejDewnSgFQ7rQLe9chkCi4hMz5g%2FOERU4YtEqM1Iy6pdaqGb2qvcFMu%2Fs43AkGTm40tY4vjsyaZX2kxrjTTF4AWJv1YcFxou0mfNiqKY2FHqLvJ%2F4sO02YzP%2BcKCSQeZI76TU%2BvF6wVz3ijJq6c1V1Zcre0FjB%2BykkGu61JPgv7BszPCGYWnBYk%2ByKVkd5JfcoqdmwVx%2Blk3UfWmXrhcRHN8twXRKjryf5hRolSweEK2YzodkiBe0066b%2BUSJfuP794SDcfvBRav5M54PHoW00pB3Csf2TwMqxfyp9XJ67TCiGLK45HPNGOSqo5vKEgTHuJrETIAU9P%2BgsIJGaO5ZuBhTiwgxi9VJYCN4yXOfSk%2FDMrEuFf9VFbv%2F%2FYISYX1omiC1sMHyn7shniPrEShzvZP5qq7ABODpqVAk6F1BBR0ZKNKWnpoAeTaifxSMiEEHxS76dqq9Zad%2BSHEzlPcXAgdP7h4N7PqKkSdUQjCKgvzMBjqkAR0DF8lEWVx2ql2ra3ZE5l4Wy8H%2FnE2jptZLWqt4Uy1lVa5ykB4rtjS5FTbAkLyiHI7xZyqmgYBfQpjjNzcj2JjVCpM%2BD1u70c2tTwEOkPZzfbHeoU%2Bq8akTGux6VbdZznv95%2BESwNdK4FsjVBJUG6nYUO7VJerhozt7YggF0pZUXGMZBETrBlpLfi3pM%2F5yuRc1p4AAJ6muIcZ2Ptu0ZE6yeptz&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=ASIAYMHW6I24MZM6UGGP%2F20260225%2Fus-west-1%2Fs3%2Faws4_request&X-Amz-Date=20260225T154348Z&X-Amz-SignedHeaders=host&X-Amz-Expires=86400&X-Amz-Signature=13ef52687df33a64ba1af68aec02d9fd6fb3a7fa908a11ba2a2f22cc139d75d6",
+                "automatically_allocated": 0,
+                "regarding_form_uuid": "deefb27a-3f7f-4291-9d4f-2266e063ca2b",
+                "name": "JSA"
+            },
+            {
+                "uuid": "fbfd5230-4b36-4aa0-8518-2266e329394b",
+                "edit_date": "2025-02-09 23:26:26",
+                "active": 1,
+                "file_name": "https://servicem8-nvc.s3.us-west-1.amazonaws.com/servicem8_06f90d/custom-badge-images/badge_fbfd5230-4b36-4aa0-8518-2266e329394b.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEEYaCXVzLXdlc3QtMSJIMEYCIQDUONtWswjtRv5iisttNJpqyzDtc%2BtrNU7mhpEEIzyJpQIhAMBrUdhfEMmb47yoN9SQ3y6xBmymFIMp1udgPLfO8ziaKu0DCA8QABoMNTc2MDQzNTAxMjQwIgx9rXuZ2wJdnAD0hdEqygMXfzNJrnZEva807nVtTZoXlrJO%2BRJST2xI0NJ3OtGeCCuJeCW3dMD5KJfWdezadlgPCMKaOYf4W1XwJbxjrSy4dgmM7a8HFH%2BKFeOOJMVgrS%2F86qpaGHRCJGYARaBejDewnSgFQ7rQLe9chkCi4hMz5g%2FOERU4YtEqM1Iy6pdaqGb2qvcFMu%2Fs43AkGTm40tY4vjsyaZX2kxrjTTF4AWJv1YcFxou0mfNiqKY2FHqLvJ%2F4sO02YzP%2BcKCSQeZI76TU%2BvF6wVz3ijJq6c1V1Zcre0FjB%2BykkGu61JPgv7BszPCGYWnBYk%2ByKVkd5JfcoqdmwVx%2Blk3UfWmXrhcRHN8twXRKjryf5hRolSweEK2YzodkiBe0066b%2BUSJfuP794SDcfvBRav5M54PHoW00pB3Csf2TwMqxfyp9XJ67TCiGLK45HPNGOSqo5vKEgTHuJrETIAU9P%2BgsIJGaO5ZuBhTiwgxi9VJYCN4yXOfSk%2FDMrEuFf9VFbv%2F%2FYISYX1omiC1sMHyn7shniPrEShzvZP5qq7ABODpqVAk6F1BBR0ZKNKWnpoAeTaifxSMiEEHxS76dqq9Zad%2BSHEzlPcXAgdP7h4N7PqKkSdUQjCKgvzMBjqkAR0DF8lEWVx2ql2ra3ZE5l4Wy8H%2FnE2jptZLWqt4Uy1lVa5ykB4rtjS5FTbAkLyiHI7xZyqmgYBfQpjjNzcj2JjVCpM%2BD1u70c2tTwEOkPZzfbHeoU%2Bq8akTGux6VbdZznv95%2BESwNdK4FsjVBJUG6nYUO7VJerhozt7YggF0pZUXGMZBETrBlpLfi3pM%2F5yuRc1p4AAJ6muIcZ2Ptu0ZE6yeptz&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=ASIAYMHW6I24MZM6UGGP%2F20260225%2Fus-west-1%2Fs3%2Faws4_request&X-Amz-Date=20260225T154348Z&X-Amz-SignedHeaders=host&X-Amz-Expires=86400&X-Amz-Signature=e8c355af3b968b30b10fa4c32d421640b0ad642463f20fc19a91d6777b4569a9",
+                "automatically_allocated": 0,
+                "regarding_form_uuid": "f547e175-7759-4b08-8720-2266eeb75d9b",
+                "name": "VSM Check"
+            },
+            {
+                "uuid": "1df5bcdb-8d33-4d44-88bb-22fd851e262b",
+                "edit_date": "2025-07-24 07:58:33",
+                "active": 1,
+                "file_name": "https://servicem8-nvc.s3.us-west-1.amazonaws.com/servicem8_06f90d/custom-badge-images/badge_1df5bcdb-8d33-4d44-88bb-22fd851e262b.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEEYaCXVzLXdlc3QtMSJIMEYCIQDUONtWswjtRv5iisttNJpqyzDtc%2BtrNU7mhpEEIzyJpQIhAMBrUdhfEMmb47yoN9SQ3y6xBmymFIMp1udgPLfO8ziaKu0DCA8QABoMNTc2MDQzNTAxMjQwIgx9rXuZ2wJdnAD0hdEqygMXfzNJrnZEva807nVtTZoXlrJO%2BRJST2xI0NJ3OtGeCCuJeCW3dMD5KJfWdezadlgPCMKaOYf4W1XwJbxjrSy4dgmM7a8HFH%2BKFeOOJMVgrS%2F86qpaGHRCJGYARaBejDewnSgFQ7rQLe9chkCi4hMz5g%2FOERU4YtEqM1Iy6pdaqGb2qvcFMu%2Fs43AkGTm40tY4vjsyaZX2kxrjTTF4AWJv1YcFxou0mfNiqKY2FHqLvJ%2F4sO02YzP%2BcKCSQeZI76TU%2BvF6wVz3ijJq6c1V1Zcre0FjB%2BykkGu61JPgv7BszPCGYWnBYk%2ByKVkd5JfcoqdmwVx%2Blk3UfWmXrhcRHN8twXRKjryf5hRolSweEK2YzodkiBe0066b%2BUSJfuP794SDcfvBRav5M54PHoW00pB3Csf2TwMqxfyp9XJ67TCiGLK45HPNGOSqo5vKEgTHuJrETIAU9P%2BgsIJGaO5ZuBhTiwgxi9VJYCN4yXOfSk%2FDMrEuFf9VFbv%2F%2FYISYX1omiC1sMHyn7shniPrEShzvZP5qq7ABODpqVAk6F1BBR0ZKNKWnpoAeTaifxSMiEEHxS76dqq9Zad%2BSHEzlPcXAgdP7h4N7PqKkSdUQjCKgvzMBjqkAR0DF8lEWVx2ql2ra3ZE5l4Wy8H%2FnE2jptZLWqt4Uy1lVa5ykB4rtjS5FTbAkLyiHI7xZyqmgYBfQpjjNzcj2JjVCpM%2BD1u70c2tTwEOkPZzfbHeoU%2Bq8akTGux6VbdZznv95%2BESwNdK4FsjVBJUG6nYUO7VJerhozt7YggF0pZUXGMZBETrBlpLfi3pM%2F5yuRc1p4AAJ6muIcZ2Ptu0ZE6yeptz&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=ASIAYMHW6I24MZM6UGGP%2F20260225%2Fus-west-1%2Fs3%2Faws4_request&X-Amz-Date=20260225T154348Z&X-Amz-SignedHeaders=host&X-Amz-Expires=86400&X-Amz-Signature=995a745b43002242f7845bea64a4573a13e5be49c82f761d0cdbcbb83855df71",
+                "automatically_allocated": 0,
+                "regarding_form_uuid": "",
+                "name": "Booking Reminder"
+            },
+            {
+                "uuid": "e9b9ab7a-efc7-4216-a5b7-23df87b73c0b",
+                "edit_date": "2026-02-22 00:27:04",
+                "active": 1,
+                "file_name": "https://servicem8-nvc.s3.us-west-1.amazonaws.com/servicem8_06f90d/custom-badge-images/badge_e9b9ab7a-efc7-4216-a5b7-23df87b73c0b.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEEYaCXVzLXdlc3QtMSJIMEYCIQDUONtWswjtRv5iisttNJpqyzDtc%2BtrNU7mhpEEIzyJpQIhAMBrUdhfEMmb47yoN9SQ3y6xBmymFIMp1udgPLfO8ziaKu0DCA8QABoMNTc2MDQzNTAxMjQwIgx9rXuZ2wJdnAD0hdEqygMXfzNJrnZEva807nVtTZoXlrJO%2BRJST2xI0NJ3OtGeCCuJeCW3dMD5KJfWdezadlgPCMKaOYf4W1XwJbxjrSy4dgmM7a8HFH%2BKFeOOJMVgrS%2F86qpaGHRCJGYARaBejDewnSgFQ7rQLe9chkCi4hMz5g%2FOERU4YtEqM1Iy6pdaqGb2qvcFMu%2Fs43AkGTm40tY4vjsyaZX2kxrjTTF4AWJv1YcFxou0mfNiqKY2FHqLvJ%2F4sO02YzP%2BcKCSQeZI76TU%2BvF6wVz3ijJq6c1V1Zcre0FjB%2BykkGu61JPgv7BszPCGYWnBYk%2ByKVkd5JfcoqdmwVx%2Blk3UfWmXrhcRHN8twXRKjryf5hRolSweEK2YzodkiBe0066b%2BUSJfuP794SDcfvBRav5M54PHoW00pB3Csf2TwMqxfyp9XJ67TCiGLK45HPNGOSqo5vKEgTHuJrETIAU9P%2BgsIJGaO5ZuBhTiwgxi9VJYCN4yXOfSk%2FDMrEuFf9VFbv%2F%2FYISYX1omiC1sMHyn7shniPrEShzvZP5qq7ABODpqVAk6F1BBR0ZKNKWnpoAeTaifxSMiEEHxS76dqq9Zad%2BSHEzlPcXAgdP7h4N7PqKkSdUQjCKgvzMBjqkAR0DF8lEWVx2ql2ra3ZE5l4Wy8H%2FnE2jptZLWqt4Uy1lVa5ykB4rtjS5FTbAkLyiHI7xZyqmgYBfQpjjNzcj2JjVCpM%2BD1u70c2tTwEOkPZzfbHeoU%2Bq8akTGux6VbdZznv95%2BESwNdK4FsjVBJUG6nYUO7VJerhozt7YggF0pZUXGMZBETrBlpLfi3pM%2F5yuRc1p4AAJ6muIcZ2Ptu0ZE6yeptz&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=ASIAYMHW6I24MZM6UGGP%2F20260225%2Fus-west-1%2Fs3%2Faws4_request&X-Amz-Date=20260225T154348Z&X-Amz-SignedHeaders=host&X-Amz-Expires=86400&X-Amz-Signature=264f4eae32201f05b7a536d6b333384bc2e50c48eebf3b6385086f64f04260fb",
+                "automatically_allocated": 0,
+                "regarding_form_uuid": "",
+                "name": "Elevated Work"
+            },
+            {
+                "uuid": "121ebe69-bdcb-4289-a685-23df87f04f1b",
+                "edit_date": "2026-02-22 00:31:00",
+                "active": 1,
+                "file_name": "https://servicem8-nvc.s3.us-west-1.amazonaws.com/servicem8_06f90d/custom-badge-images/badge_121ebe69-bdcb-4289-a685-23df87f04f1b.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEEYaCXVzLXdlc3QtMSJIMEYCIQDUONtWswjtRv5iisttNJpqyzDtc%2BtrNU7mhpEEIzyJpQIhAMBrUdhfEMmb47yoN9SQ3y6xBmymFIMp1udgPLfO8ziaKu0DCA8QABoMNTc2MDQzNTAxMjQwIgx9rXuZ2wJdnAD0hdEqygMXfzNJrnZEva807nVtTZoXlrJO%2BRJST2xI0NJ3OtGeCCuJeCW3dMD5KJfWdezadlgPCMKaOYf4W1XwJbxjrSy4dgmM7a8HFH%2BKFeOOJMVgrS%2F86qpaGHRCJGYARaBejDewnSgFQ7rQLe9chkCi4hMz5g%2FOERU4YtEqM1Iy6pdaqGb2qvcFMu%2Fs43AkGTm40tY4vjsyaZX2kxrjTTF4AWJv1YcFxou0mfNiqKY2FHqLvJ%2F4sO02YzP%2BcKCSQeZI76TU%2BvF6wVz3ijJq6c1V1Zcre0FjB%2BykkGu61JPgv7BszPCGYWnBYk%2ByKVkd5JfcoqdmwVx%2Blk3UfWmXrhcRHN8twXRKjryf5hRolSweEK2YzodkiBe0066b%2BUSJfuP794SDcfvBRav5M54PHoW00pB3Csf2TwMqxfyp9XJ67TCiGLK45HPNGOSqo5vKEgTHuJrETIAU9P%2BgsIJGaO5ZuBhTiwgxi9VJYCN4yXOfSk%2FDMrEuFf9VFbv%2F%2FYISYX1omiC1sMHyn7shniPrEShzvZP5qq7ABODpqVAk6F1BBR0ZKNKWnpoAeTaifxSMiEEHxS76dqq9Zad%2BSHEzlPcXAgdP7h4N7PqKkSdUQjCKgvzMBjqkAR0DF8lEWVx2ql2ra3ZE5l4Wy8H%2FnE2jptZLWqt4Uy1lVa5ykB4rtjS5FTbAkLyiHI7xZyqmgYBfQpjjNzcj2JjVCpM%2BD1u70c2tTwEOkPZzfbHeoU%2Bq8akTGux6VbdZznv95%2BESwNdK4FsjVBJUG6nYUO7VJerhozt7YggF0pZUXGMZBETrBlpLfi3pM%2F5yuRc1p4AAJ6muIcZ2Ptu0ZE6yeptz&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=ASIAYMHW6I24MZM6UGGP%2F20260225%2Fus-west-1%2Fs3%2Faws4_request&X-Amz-Date=20260225T154348Z&X-Amz-SignedHeaders=host&X-Amz-Expires=86400&X-Amz-Signature=df4ef831919271c0449b55e9797a56816e7304af948b69df413630bc6a941e6f",
+                "automatically_allocated": 0,
+                "regarding_form_uuid": "",
+                "name": "Heavy Soiling/Contamination "
+            },
+            {
+                "uuid": "b9c848ec-a36c-46db-9665-23df8f88e18b",
+                "edit_date": "2026-02-22 00:32:40",
+                "active": 1,
+                "file_name": "https://servicem8-nvc.s3.us-west-1.amazonaws.com/servicem8_06f90d/custom-badge-images/badge_b9c848ec-a36c-46db-9665-23df8f88e18b.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEEYaCXVzLXdlc3QtMSJIMEYCIQDUONtWswjtRv5iisttNJpqyzDtc%2BtrNU7mhpEEIzyJpQIhAMBrUdhfEMmb47yoN9SQ3y6xBmymFIMp1udgPLfO8ziaKu0DCA8QABoMNTc2MDQzNTAxMjQwIgx9rXuZ2wJdnAD0hdEqygMXfzNJrnZEva807nVtTZoXlrJO%2BRJST2xI0NJ3OtGeCCuJeCW3dMD5KJfWdezadlgPCMKaOYf4W1XwJbxjrSy4dgmM7a8HFH%2BKFeOOJMVgrS%2F86qpaGHRCJGYARaBejDewnSgFQ7rQLe9chkCi4hMz5g%2FOERU4YtEqM1Iy6pdaqGb2qvcFMu%2Fs43AkGTm40tY4vjsyaZX2kxrjTTF4AWJv1YcFxou0mfNiqKY2FHqLvJ%2F4sO02YzP%2BcKCSQeZI76TU%2BvF6wVz3ijJq6c1V1Zcre0FjB%2BykkGu61JPgv7BszPCGYWnBYk%2ByKVkd5JfcoqdmwVx%2Blk3UfWmXrhcRHN8twXRKjryf5hRolSweEK2YzodkiBe0066b%2BUSJfuP794SDcfvBRav5M54PHoW00pB3Csf2TwMqxfyp9XJ67TCiGLK45HPNGOSqo5vKEgTHuJrETIAU9P%2BgsIJGaO5ZuBhTiwgxi9VJYCN4yXOfSk%2FDMrEuFf9VFbv%2F%2FYISYX1omiC1sMHyn7shniPrEShzvZP5qq7ABODpqVAk6F1BBR0ZKNKWnpoAeTaifxSMiEEHxS76dqq9Zad%2BSHEzlPcXAgdP7h4N7PqKkSdUQjCKgvzMBjqkAR0DF8lEWVx2ql2ra3ZE5l4Wy8H%2FnE2jptZLWqt4Uy1lVa5ykB4rtjS5FTbAkLyiHI7xZyqmgYBfQpjjNzcj2JjVCpM%2BD1u70c2tTwEOkPZzfbHeoU%2Bq8akTGux6VbdZznv95%2BESwNdK4FsjVBJUG6nYUO7VJerhozt7YggF0pZUXGMZBETrBlpLfi3pM%2F5yuRc1p4AAJ6muIcZ2Ptu0ZE6yeptz&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=ASIAYMHW6I24MZM6UGGP%2F20260225%2Fus-west-1%2Fs3%2Faws4_request&X-Amz-Date=20260225T154348Z&X-Amz-SignedHeaders=host&X-Amz-Expires=86400&X-Amz-Signature=59606a7538be27b3a42fee85689e46c4a55d49f993aad85f5698f09ea57e0bc5",
+                "automatically_allocated": 0,
+                "regarding_form_uuid": "",
+                "name": "Interior Access Required"
+            },
+            {
+                "uuid": "3be842ca-2568-4f1e-9a1c-23df84d7dd8b",
+                "edit_date": "2026-02-22 00:33:05",
+                "active": 1,
+                "file_name": "https://servicem8-nvc.s3.us-west-1.amazonaws.com/servicem8_06f90d/custom-badge-images/badge_3be842ca-2568-4f1e-9a1c-23df84d7dd8b.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEEYaCXVzLXdlc3QtMSJIMEYCIQDUONtWswjtRv5iisttNJpqyzDtc%2BtrNU7mhpEEIzyJpQIhAMBrUdhfEMmb47yoN9SQ3y6xBmymFIMp1udgPLfO8ziaKu0DCA8QABoMNTc2MDQzNTAxMjQwIgx9rXuZ2wJdnAD0hdEqygMXfzNJrnZEva807nVtTZoXlrJO%2BRJST2xI0NJ3OtGeCCuJeCW3dMD5KJfWdezadlgPCMKaOYf4W1XwJbxjrSy4dgmM7a8HFH%2BKFeOOJMVgrS%2F86qpaGHRCJGYARaBejDewnSgFQ7rQLe9chkCi4hMz5g%2FOERU4YtEqM1Iy6pdaqGb2qvcFMu%2Fs43AkGTm40tY4vjsyaZX2kxrjTTF4AWJv1YcFxou0mfNiqKY2FHqLvJ%2F4sO02YzP%2BcKCSQeZI76TU%2BvF6wVz3ijJq6c1V1Zcre0FjB%2BykkGu61JPgv7BszPCGYWnBYk%2ByKVkd5JfcoqdmwVx%2Blk3UfWmXrhcRHN8twXRKjryf5hRolSweEK2YzodkiBe0066b%2BUSJfuP794SDcfvBRav5M54PHoW00pB3Csf2TwMqxfyp9XJ67TCiGLK45HPNGOSqo5vKEgTHuJrETIAU9P%2BgsIJGaO5ZuBhTiwgxi9VJYCN4yXOfSk%2FDMrEuFf9VFbv%2F%2FYISYX1omiC1sMHyn7shniPrEShzvZP5qq7ABODpqVAk6F1BBR0ZKNKWnpoAeTaifxSMiEEHxS76dqq9Zad%2BSHEzlPcXAgdP7h4N7PqKkSdUQjCKgvzMBjqkAR0DF8lEWVx2ql2ra3ZE5l4Wy8H%2FnE2jptZLWqt4Uy1lVa5ykB4rtjS5FTbAkLyiHI7xZyqmgYBfQpjjNzcj2JjVCpM%2BD1u70c2tTwEOkPZzfbHeoU%2Bq8akTGux6VbdZznv95%2BESwNdK4FsjVBJUG6nYUO7VJerhozt7YggF0pZUXGMZBETrBlpLfi3pM%2F5yuRc1p4AAJ6muIcZ2Ptu0ZE6yeptz&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=ASIAYMHW6I24MZM6UGGP%2F20260225%2Fus-west-1%2Fs3%2Faws4_request&X-Amz-Date=20260225T154348Z&X-Amz-SignedHeaders=host&X-Amz-Expires=86400&X-Amz-Signature=143b7dbb3b94d1c47cb4981cdd1df2ab88c0a3023c7585a148884f624c582f88",
+                "automatically_allocated": 0,
+                "regarding_form_uuid": "",
+                "name": "Waiver Required"
+            },
+            {
+                "uuid": "f91b2602-d995-4fc7-b003-23df8712399b",
+                "edit_date": "2026-02-22 00:35:01",
+                "active": 1,
+                "file_name": "https://servicem8-nvc.s3.us-west-1.amazonaws.com/servicem8_06f90d/custom-badge-images/badge_f91b2602-d995-4fc7-b003-23df8712399b.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEEYaCXVzLXdlc3QtMSJIMEYCIQDUONtWswjtRv5iisttNJpqyzDtc%2BtrNU7mhpEEIzyJpQIhAMBrUdhfEMmb47yoN9SQ3y6xBmymFIMp1udgPLfO8ziaKu0DCA8QABoMNTc2MDQzNTAxMjQwIgx9rXuZ2wJdnAD0hdEqygMXfzNJrnZEva807nVtTZoXlrJO%2BRJST2xI0NJ3OtGeCCuJeCW3dMD5KJfWdezadlgPCMKaOYf4W1XwJbxjrSy4dgmM7a8HFH%2BKFeOOJMVgrS%2F86qpaGHRCJGYARaBejDewnSgFQ7rQLe9chkCi4hMz5g%2FOERU4YtEqM1Iy6pdaqGb2qvcFMu%2Fs43AkGTm40tY4vjsyaZX2kxrjTTF4AWJv1YcFxou0mfNiqKY2FHqLvJ%2F4sO02YzP%2BcKCSQeZI76TU%2BvF6wVz3ijJq6c1V1Zcre0FjB%2BykkGu61JPgv7BszPCGYWnBYk%2ByKVkd5JfcoqdmwVx%2Blk3UfWmXrhcRHN8twXRKjryf5hRolSweEK2YzodkiBe0066b%2BUSJfuP794SDcfvBRav5M54PHoW00pB3Csf2TwMqxfyp9XJ67TCiGLK45HPNGOSqo5vKEgTHuJrETIAU9P%2BgsIJGaO5ZuBhTiwgxi9VJYCN4yXOfSk%2FDMrEuFf9VFbv%2F%2FYISYX1omiC1sMHyn7shniPrEShzvZP5qq7ABODpqVAk6F1BBR0ZKNKWnpoAeTaifxSMiEEHxS76dqq9Zad%2BSHEzlPcXAgdP7h4N7PqKkSdUQjCKgvzMBjqkAR0DF8lEWVx2ql2ra3ZE5l4Wy8H%2FnE2jptZLWqt4Uy1lVa5ykB4rtjS5FTbAkLyiHI7xZyqmgYBfQpjjNzcj2JjVCpM%2BD1u70c2tTwEOkPZzfbHeoU%2Bq8akTGux6VbdZznv95%2BESwNdK4FsjVBJUG6nYUO7VJerhozt7YggF0pZUXGMZBETrBlpLfi3pM%2F5yuRc1p4AAJ6muIcZ2Ptu0ZE6yeptz&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=ASIAYMHW6I24MZM6UGGP%2F20260225%2Fus-west-1%2Fs3%2Faws4_request&X-Amz-Date=20260225T154348Z&X-Amz-SignedHeaders=host&X-Amz-Expires=86400&X-Amz-Signature=cc4a6e74e9438360b9d94bef42973ef096b5414bba41df2f61c0f1d0292441fd",
+                "automatically_allocated": 0,
+                "regarding_form_uuid": "",
+                "name": "New Customer"
+            },
+            {
+                "uuid": "1c80fc24-96fb-49d9-9cd6-23df8240fd0b",
+                "edit_date": "2026-02-22 00:37:10",
+                "active": 1,
+                "file_name": "https://servicem8-nvc.s3.us-west-1.amazonaws.com/servicem8_06f90d/custom-badge-images/badge_1c80fc24-96fb-49d9-9cd6-23df8240fd0b.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEEYaCXVzLXdlc3QtMSJIMEYCIQDUONtWswjtRv5iisttNJpqyzDtc%2BtrNU7mhpEEIzyJpQIhAMBrUdhfEMmb47yoN9SQ3y6xBmymFIMp1udgPLfO8ziaKu0DCA8QABoMNTc2MDQzNTAxMjQwIgx9rXuZ2wJdnAD0hdEqygMXfzNJrnZEva807nVtTZoXlrJO%2BRJST2xI0NJ3OtGeCCuJeCW3dMD5KJfWdezadlgPCMKaOYf4W1XwJbxjrSy4dgmM7a8HFH%2BKFeOOJMVgrS%2F86qpaGHRCJGYARaBejDewnSgFQ7rQLe9chkCi4hMz5g%2FOERU4YtEqM1Iy6pdaqGb2qvcFMu%2Fs43AkGTm40tY4vjsyaZX2kxrjTTF4AWJv1YcFxou0mfNiqKY2FHqLvJ%2F4sO02YzP%2BcKCSQeZI76TU%2BvF6wVz3ijJq6c1V1Zcre0FjB%2BykkGu61JPgv7BszPCGYWnBYk%2ByKVkd5JfcoqdmwVx%2Blk3UfWmXrhcRHN8twXRKjryf5hRolSweEK2YzodkiBe0066b%2BUSJfuP794SDcfvBRav5M54PHoW00pB3Csf2TwMqxfyp9XJ67TCiGLK45HPNGOSqo5vKEgTHuJrETIAU9P%2BgsIJGaO5ZuBhTiwgxi9VJYCN4yXOfSk%2FDMrEuFf9VFbv%2F%2FYISYX1omiC1sMHyn7shniPrEShzvZP5qq7ABODpqVAk6F1BBR0ZKNKWnpoAeTaifxSMiEEHxS76dqq9Zad%2BSHEzlPcXAgdP7h4N7PqKkSdUQjCKgvzMBjqkAR0DF8lEWVx2ql2ra3ZE5l4Wy8H%2FnE2jptZLWqt4Uy1lVa5ykB4rtjS5FTbAkLyiHI7xZyqmgYBfQpjjNzcj2JjVCpM%2BD1u70c2tTwEOkPZzfbHeoU%2Bq8akTGux6VbdZznv95%2BESwNdK4FsjVBJUG6nYUO7VJerhozt7YggF0pZUXGMZBETrBlpLfi3pM%2F5yuRc1p4AAJ6muIcZ2Ptu0ZE6yeptz&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=ASIAYMHW6I24MZM6UGGP%2F20260225%2Fus-west-1%2Fs3%2Faws4_request&X-Amz-Date=20260225T154348Z&X-Amz-SignedHeaders=host&X-Amz-Expires=86400&X-Amz-Signature=ea0c109c22deae49a69e61687172c355402cde1b4e05b9c54084398e52fa3256",
+                "automatically_allocated": 0,
+                "regarding_form_uuid": "",
+                "name": "Repeat Customer"
+            },
+            {
+                "uuid": "153a6ffd-1958-4304-99d8-23df8c62c47b",
+                "edit_date": "2026-02-22 00:41:10",
+                "active": 1,
+                "file_name": "https://servicem8-nvc.s3.us-west-1.amazonaws.com/servicem8_06f90d/custom-badge-images/badge_153a6ffd-1958-4304-99d8-23df8c62c47b.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEEYaCXVzLXdlc3QtMSJIMEYCIQDUONtWswjtRv5iisttNJpqyzDtc%2BtrNU7mhpEEIzyJpQIhAMBrUdhfEMmb47yoN9SQ3y6xBmymFIMp1udgPLfO8ziaKu0DCA8QABoMNTc2MDQzNTAxMjQwIgx9rXuZ2wJdnAD0hdEqygMXfzNJrnZEva807nVtTZoXlrJO%2BRJST2xI0NJ3OtGeCCuJeCW3dMD5KJfWdezadlgPCMKaOYf4W1XwJbxjrSy4dgmM7a8HFH%2BKFeOOJMVgrS%2F86qpaGHRCJGYARaBejDewnSgFQ7rQLe9chkCi4hMz5g%2FOERU4YtEqM1Iy6pdaqGb2qvcFMu%2Fs43AkGTm40tY4vjsyaZX2kxrjTTF4AWJv1YcFxou0mfNiqKY2FHqLvJ%2F4sO02YzP%2BcKCSQeZI76TU%2BvF6wVz3ijJq6c1V1Zcre0FjB%2BykkGu61JPgv7BszPCGYWnBYk%2ByKVkd5JfcoqdmwVx%2Blk3UfWmXrhcRHN8twXRKjryf5hRolSweEK2YzodkiBe0066b%2BUSJfuP794SDcfvBRav5M54PHoW00pB3Csf2TwMqxfyp9XJ67TCiGLK45HPNGOSqo5vKEgTHuJrETIAU9P%2BgsIJGaO5ZuBhTiwgxi9VJYCN4yXOfSk%2FDMrEuFf9VFbv%2F%2FYISYX1omiC1sMHyn7shniPrEShzvZP5qq7ABODpqVAk6F1BBR0ZKNKWnpoAeTaifxSMiEEHxS76dqq9Zad%2BSHEzlPcXAgdP7h4N7PqKkSdUQjCKgvzMBjqkAR0DF8lEWVx2ql2ra3ZE5l4Wy8H%2FnE2jptZLWqt4Uy1lVa5ykB4rtjS5FTbAkLyiHI7xZyqmgYBfQpjjNzcj2JjVCpM%2BD1u70c2tTwEOkPZzfbHeoU%2Bq8akTGux6VbdZznv95%2BESwNdK4FsjVBJUG6nYUO7VJerhozt7YggF0pZUXGMZBETrBlpLfi3pM%2F5yuRc1p4AAJ6muIcZ2Ptu0ZE6yeptz&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=ASIAYMHW6I24MZM6UGGP%2F20260225%2Fus-west-1%2Fs3%2Faws4_request&X-Amz-Date=20260225T154348Z&X-Amz-SignedHeaders=host&X-Amz-Expires=86400&X-Amz-Signature=e9a73318b7ab4b19e915ff6d899d486c043333f333902d36f2b4f7dff895c06a",
+                "automatically_allocated": 0,
+                "regarding_form_uuid": "",
+                "name": "Gleam-On Member"
+            },
+            {
+                "uuid": "1c527d74-44af-4ceb-824e-23df8c4991db",
+                "edit_date": "2026-02-22 00:42:47",
+                "active": 1,
+                "file_name": "https://servicem8-nvc.s3.us-west-1.amazonaws.com/servicem8_06f90d/custom-badge-images/badge_1c527d74-44af-4ceb-824e-23df8c4991db.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEEYaCXVzLXdlc3QtMSJIMEYCIQDUONtWswjtRv5iisttNJpqyzDtc%2BtrNU7mhpEEIzyJpQIhAMBrUdhfEMmb47yoN9SQ3y6xBmymFIMp1udgPLfO8ziaKu0DCA8QABoMNTc2MDQzNTAxMjQwIgx9rXuZ2wJdnAD0hdEqygMXfzNJrnZEva807nVtTZoXlrJO%2BRJST2xI0NJ3OtGeCCuJeCW3dMD5KJfWdezadlgPCMKaOYf4W1XwJbxjrSy4dgmM7a8HFH%2BKFeOOJMVgrS%2F86qpaGHRCJGYARaBejDewnSgFQ7rQLe9chkCi4hMz5g%2FOERU4YtEqM1Iy6pdaqGb2qvcFMu%2Fs43AkGTm40tY4vjsyaZX2kxrjTTF4AWJv1YcFxou0mfNiqKY2FHqLvJ%2F4sO02YzP%2BcKCSQeZI76TU%2BvF6wVz3ijJq6c1V1Zcre0FjB%2BykkGu61JPgv7BszPCGYWnBYk%2ByKVkd5JfcoqdmwVx%2Blk3UfWmXrhcRHN8twXRKjryf5hRolSweEK2YzodkiBe0066b%2BUSJfuP794SDcfvBRav5M54PHoW00pB3Csf2TwMqxfyp9XJ67TCiGLK45HPNGOSqo5vKEgTHuJrETIAU9P%2BgsIJGaO5ZuBhTiwgxi9VJYCN4yXOfSk%2FDMrEuFf9VFbv%2F%2FYISYX1omiC1sMHyn7shniPrEShzvZP5qq7ABODpqVAk6F1BBR0ZKNKWnpoAeTaifxSMiEEHxS76dqq9Zad%2BSHEzlPcXAgdP7h4N7PqKkSdUQjCKgvzMBjqkAR0DF8lEWVx2ql2ra3ZE5l4Wy8H%2FnE2jptZLWqt4Uy1lVa5ykB4rtjS5FTbAkLyiHI7xZyqmgYBfQpjjNzcj2JjVCpM%2BD1u70c2tTwEOkPZzfbHeoU%2Bq8akTGux6VbdZznv95%2BESwNdK4FsjVBJUG6nYUO7VJerhozt7YggF0pZUXGMZBETrBlpLfi3pM%2F5yuRc1p4AAJ6muIcZ2Ptu0ZE6yeptz&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=ASIAYMHW6I24MZM6UGGP%2F20260225%2Fus-west-1%2Fs3%2Faws4_request&X-Amz-Date=20260225T154348Z&X-Amz-SignedHeaders=host&X-Amz-Expires=86400&X-Amz-Signature=6e424b26acf53080c64853fd336627570f19a432ccd644d7ed29dcff6f23f33e",
+                "automatically_allocated": 0,
+                "regarding_form_uuid": "",
+                "name": "5x5 Guarantee"
+            },
+            {
+                "uuid": "7d8ee920-3753-4436-85eb-23df812f557b",
+                "edit_date": "2026-02-22 00:43:54",
+                "active": 1,
+                "file_name": "https://servicem8-nvc.s3.us-west-1.amazonaws.com/servicem8_06f90d/custom-badge-images/badge_7d8ee920-3753-4436-85eb-23df812f557b.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEEYaCXVzLXdlc3QtMSJIMEYCIQDUONtWswjtRv5iisttNJpqyzDtc%2BtrNU7mhpEEIzyJpQIhAMBrUdhfEMmb47yoN9SQ3y6xBmymFIMp1udgPLfO8ziaKu0DCA8QABoMNTc2MDQzNTAxMjQwIgx9rXuZ2wJdnAD0hdEqygMXfzNJrnZEva807nVtTZoXlrJO%2BRJST2xI0NJ3OtGeCCuJeCW3dMD5KJfWdezadlgPCMKaOYf4W1XwJbxjrSy4dgmM7a8HFH%2BKFeOOJMVgrS%2F86qpaGHRCJGYARaBejDewnSgFQ7rQLe9chkCi4hMz5g%2FOERU4YtEqM1Iy6pdaqGb2qvcFMu%2Fs43AkGTm40tY4vjsyaZX2kxrjTTF4AWJv1YcFxou0mfNiqKY2FHqLvJ%2F4sO02YzP%2BcKCSQeZI76TU%2BvF6wVz3ijJq6c1V1Zcre0FjB%2BykkGu61JPgv7BszPCGYWnBYk%2ByKVkd5JfcoqdmwVx%2Blk3UfWmXrhcRHN8twXRKjryf5hRolSweEK2YzodkiBe0066b%2BUSJfuP794SDcfvBRav5M54PHoW00pB3Csf2TwMqxfyp9XJ67TCiGLK45HPNGOSqo5vKEgTHuJrETIAU9P%2BgsIJGaO5ZuBhTiwgxi9VJYCN4yXOfSk%2FDMrEuFf9VFbv%2F%2FYISYX1omiC1sMHyn7shniPrEShzvZP5qq7ABODpqVAk6F1BBR0ZKNKWnpoAeTaifxSMiEEHxS76dqq9Zad%2BSHEzlPcXAgdP7h4N7PqKkSdUQjCKgvzMBjqkAR0DF8lEWVx2ql2ra3ZE5l4Wy8H%2FnE2jptZLWqt4Uy1lVa5ykB4rtjS5FTbAkLyiHI7xZyqmgYBfQpjjNzcj2JjVCpM%2BD1u70c2tTwEOkPZzfbHeoU%2Bq8akTGux6VbdZznv95%2BESwNdK4FsjVBJUG6nYUO7VJerhozt7YggF0pZUXGMZBETrBlpLfi3pM%2F5yuRc1p4AAJ6muIcZ2Ptu0ZE6yeptz&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=ASIAYMHW6I24MZM6UGGP%2F20260225%2Fus-west-1%2Fs3%2Faws4_request&X-Amz-Date=20260225T154348Z&X-Amz-SignedHeaders=host&X-Amz-Expires=86400&X-Amz-Signature=16606fdaf5de5460496345fdac5d481c2801c07460ad36cb0e9f7045dcbc4a48",
+                "automatically_allocated": 0,
+                "regarding_form_uuid": "",
+                "name": "Satisfaction Reclean"
+            }
+        ],
+        "headers": {
+            "content-type": "application/json",
+            "transfer-encoding": "chunked",
+            "connection": "close",
+            "date": "Wed, 25 Feb 2026 15:43:48 GMT",
+            "server": "nginx",
+            "strict-transport-security": "max-age=63072000; includeSubDomains",
+            "x-frame-options": "SAMEORIGIN",
+            "x-platform-date-utc": "2026-02-25 15:43:48",
+            "cache-control": "private, max-age=0",
+            "x-cache": "Miss from cloudfront",
+            "via": "1.1 36f05977def08f4abff71f3d6cbdf918.cloudfront.net (CloudFront)",
+            "x-amz-cf-pop": "IAD61-P12",
+            "alt-svc": "h3=\":443\"; ma=86400",
+            "x-amz-cf-id": "sW44FQY6JmEubpZRrbo0xn6mgZDIi49TWXbTU5Ooa_3a9ZTRI4TNfg=="
+        },
+        "statusCode": 200
+    }
+]
