@@ -1,12 +1,3 @@
-The `README.md` is the "lobby" of your repository. Because you have offloaded all the heavy architectural rules, pricing math, and compliance tripwires into `project-context.md`, your `README.md` should be incredibly lean, punchy, and instructional.
-
-Its primary job is to tell a human developer (or an LLM) exactly **what this repository is**, **where things live**, and **what rules to read before touching the code**.
-
-Here is the perfect, enterprise-grade `README.md` template tailored specifically for the **Gleam Digital Engine**. You can copy and paste this directly into your file.
-
----
-
-```markdown
 # Gleam Digital Engine (v3.0) 🚀
 
 Welcome to the central repository for the **Gleam Digital Engine**. This project houses the frontend acquisition widgets and backend Node.js sandbox environments that power Gleam's automated quoting, dispatching, and subscription ecosystem.
@@ -113,6 +104,3 @@ Always create a feature branch off of `develop` when starting new work!
 2. **Clear Setup Instructions:** If you get a new computer tomorrow, you can follow the "Quick Start" steps to have your Node.js sandbox running in exactly 60 seconds without having to remember the npm commands.
 3. **Clean Visual Hierarchy:** It acts as a perfect table of contents for the entire repository.
 
-**Would you like to move on to Phase 4.1 and configure the actual Make.com webhook URL inside your frontend's `api-client.js` file?**
-
-```
