@@ -1,3 +1,12 @@
+The `README.md` is the "lobby" of your repository. Because you have offloaded all the heavy architectural rules, pricing math, and compliance tripwires into `project-context.md`, your `README.md` should be incredibly lean, punchy, and instructional.
+
+Its primary job is to tell a human developer (or an LLM) exactly **what this repository is**, **where things live**, and **what rules to read before touching the code**.
+
+Here is the perfect, enterprise-grade `README.md` template tailored specifically for the **Gleam Digital Engine**. You can copy and paste this directly into your file.
+
+---
+
+```markdown
 # Gleam Digital Engine (v3.0) 🚀
 
 Welcome to the central repository for the **Gleam Digital Engine**. This project houses the frontend acquisition widgets and backend Node.js sandbox environments that power Gleam's automated quoting, dispatching, and subscription ecosystem.
@@ -30,3 +39,80 @@ gleam-digital-engine/
 │   ├── estimator_widget/      # Lead capture and proxy-data collection
 │   └── booking_hub_widget/    # Stripe checkout and ServiceM8 scheduling hub
 └── backend_sandbox/           # The Node.js environment for API prototyping and AI vision scripts
+
+```
+
+---
+
+## 🛠️ Tech Stack & Integrations
+
+* **Frontend:** HTML5, CSS3, Vanilla JavaScript (ES6+).
+* **Backend Runtime:** Make.com (Production Routing) / Node.js (Sandbox Prototyping).
+* **AI & Actuarial Data:** Google Gemini 2.5 Flash, RentCast API, Google Solar/Elevation APIs.
+* **CRM & Dispatch:** ServiceM8.
+* **Payments:** Stripe (Elements & Billing), Affirm BNPL.
+* **Security:** Google reCAPTCHA v3, Gitleaks, Cloudflare WAF.
+
+---
+
+## 💻 Quick Start: Running the Sandbox Locally
+
+If you are developing backend Node.js scripts (like testing the Gemini Vision AI or RentCast API), follow these steps:
+
+1. Clone the repository:
+```bash
+git clone [https://github.com/Rambl3Odd/gleam-digital-engine.git](https://github.com/Rambl3Odd/gleam-digital-engine.git)
+
+```
+
+
+2. Navigate to the sandbox:
+```bash
+cd gleam-digital-engine/backend_sandbox
+
+```
+
+
+3. Install dependencies (this builds your local `node_modules` folder):
+```bash
+npm install
+
+```
+
+
+4. Configure your environment variables:
+* Duplicate the `.env.example` file and rename it to `.env`.
+* Add your private API keys to the new `.env` file (this file is ignored by Git).
+
+
+5. Run your test scripts from the `src/` directory:
+```bash
+node src/analyzeProperty.js
+
+```
+
+
+
+---
+
+## 🌿 GitOps Branching Strategy
+
+We enforce strict environment separation via Git branches:
+
+* **`main`**: Production. Code is only merged here via Pull Requests after passing security scans.
+* **`develop`**: Sandbox/Staging. All active development, UI testing, and new feature building occurs here.
+
+Always create a feature branch off of `develop` when starting new work!
+
+```
+
+***
+
+### Why this README is optimized:
+1. **The "Stop Sign":** It immediately forces any LLM coding agent (like Cursor or Copilot) to go read your `project-context.md` file, which prevents them from hallucinating React code or putting math in your HTML.
+2. **Clear Setup Instructions:** If you get a new computer tomorrow, you can follow the "Quick Start" steps to have your Node.js sandbox running in exactly 60 seconds without having to remember the npm commands.
+3. **Clean Visual Hierarchy:** It acts as a perfect table of contents for the entire repository.
+
+**Would you like to move on to Phase 4.1 and configure the actual Make.com webhook URL inside your frontend's `api-client.js` file?**
+
+```
